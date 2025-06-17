@@ -78,7 +78,7 @@ const Footer = () => {
                <div className="Footer-boring-stuff">
                   <a href="/terms-of-service">Terms of Use</a>
                   &nbsp;/&nbsp;
-                  &copy; 2024 Interconnected Collective
+                  &copy; 2025 Interconnected Collective
                </div>
             </div>
          </div>
@@ -150,7 +150,7 @@ const Footer = () => {
                <div className="Footer-boring-stuff">
                   <a href="/terms-of-service">Terms of Use</a>
                   &nbsp;/&nbsp;
-                  &copy; 2024 Interconnected Collective
+                  &copy; 2025 Interconnected Collective
                </div>
             </div>
          </div>
