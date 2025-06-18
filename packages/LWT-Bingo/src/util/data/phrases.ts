@@ -229,7 +229,7 @@ const phrases: Phrases = {
   224: 'Get 4 bingos!',
   225: 'Get 5 bingos!',
   226: 'Get 2 bingos!',
-  227: 'You own a bingo dobber',
+  227: 'You own a bingo dauber',
   228: 'played bingo in elementary school',
   229: 'played Gay bingo',
   230: 'played drag bingo',
