@@ -58,6 +58,7 @@ const User: React.FC = () => {
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
             alt={user?.displayName}
+            tabIndex={0}
           />
         )
         /*{ <Typography variant="body2"> {user?.displayName}</Typography>
