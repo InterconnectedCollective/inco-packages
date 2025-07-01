@@ -53,11 +53,18 @@ const User: React.FC = () => {
           <Avatar
             src={user?.photoURL}
             onClick={showUserMenu}
+            onKeyDown={(e) => {
+              if (e.code === "Enter") {
+                e.preventDefault();
+                showUserMenu;
+              }
+            }}
             aria-label="user-menu-button"
             aria-controls={open ? 'menu' : undefined}
             aria-haspopup="true"
             aria-expanded={open ? 'true' : undefined}
             alt={user?.displayName}
+            tabIndex={0}
           />
         )
         /*{ <Typography variant="body2"> {user?.displayName}</Typography>
