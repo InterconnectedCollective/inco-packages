@@ -32,6 +32,21 @@ export const ScoreSubmissionModal = ({
 
   const [isOptedIn, setIsOptedIn] = React.useState<boolean>(false);
 
+  function handleOnCheckmark(e: React.ChangeEvent<HTMLInputElement>) {
+    setIsOptedIn(e.target.checked);
+  }
+
+  async function handleSubmitScore() {
+    try {
+      await submitScore(user?.uid, score);
+      track(EventName.SCORE_SUBMITTED, { userId: user?.uid, score });
+      resetBoard();
+      onClose();
+    } catch (error) {
+      throw new Error('Failed to submit score.');
+    }
+  }
+
   return (
     <Dialog
       open={isOpen}
@@ -63,8 +78,8 @@ export const ScoreSubmissionModal = ({
                 marginBottom: '16px',
               }}
             >
-              Congratulations, {user?.username}!!! You earned another Bingo at
-              the #LWTSummit!
+              Congratulations {user ? user.username : ''}!!! You earned another
+              Bingo at the #LWTSummit!
             </Typography>
             <Typography variant="h5">
               <strong>Board score: {score} points</strong>
@@ -91,18 +106,4 @@ export const ScoreSubmissionModal = ({
       </DialogContent>
     </Dialog>
   );
-  function handleOnCheckmark(e: React.ChangeEvent<HTMLInputElement>) {
-    setIsOptedIn(e.target.checked);
-  }
-
-  async function handleSubmitScore() {
-    try {
-      await submitScore(user?.uid, score);
-      track(EventName.SCORE_SUBMITTED, { userId: user?.uid, score });
-      resetBoard();
-      onClose();
-    } catch (error) {
-      throw new Error('Failed to submit score.');
-    }
-  }
 };

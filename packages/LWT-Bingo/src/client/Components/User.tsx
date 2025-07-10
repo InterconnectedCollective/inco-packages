@@ -54,7 +54,7 @@ const User: React.FC = () => {
             src={user?.photoURL}
             onClick={showUserMenu}
             onKeyDown={(e) => {
-              if (e.code === "Enter") {
+              if (e.code === 'Enter') {
                 e.preventDefault();
                 showUserMenu(e);
               }
