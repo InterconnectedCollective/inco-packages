@@ -10,8 +10,7 @@ import { useTheme } from '@mui/material';
 import ConfettiExplosion from 'react-confetti-explosion';
 import Stack from '@mui/material/Stack';
 import { useAuth } from '../../hooks/useAuth';
-import { LoginModal } from '../Modals/LoginModal';
-import { UpdateUsernameModal } from '../Modals/UpdateUsernameModal';
+import { LoginModal } from '../Modals/User/LoginModal';
 import { ScoreSubmissionModal } from '../Modals/ScoreSubmissionModal';
 import phrases from '../../../util/data/phrases';
 import { BoardState } from '../../../types';
@@ -250,12 +249,6 @@ const Board: React.FC = () => {
       >
         <HowToPlay close={SetHowTo}></HowToPlay>
       </Modal>
-      <UpdateUsernameModal
-        isOpen={usernameOpen}
-        onClose={handleUsernameClose}
-        score={bingoResult?.score}
-        resetBoard={resetBoard}
-      />
       {submitScoreOpen && (
         <ScoreSubmissionModal
           isOpen={submitScoreOpen}

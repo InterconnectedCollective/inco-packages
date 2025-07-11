@@ -3,7 +3,7 @@ import { useAuth } from '../hooks/useAuth';
 import { Avatar, Typography } from '@mui/material';
 import { getAuth } from 'firebase/auth';
 
-import UserMenu from './UserMenu';
+import UserMenu from './Modals/User/UserMenu';
 import { styled } from 'styled-components';
 // import { AnchorOutlined } from '@mui/icons-material';
 

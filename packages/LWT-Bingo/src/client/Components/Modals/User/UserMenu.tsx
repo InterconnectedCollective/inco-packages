@@ -6,8 +6,8 @@ import {
   Controller,
 } from 'react-hook-form';
 import { getAuth, signOut } from 'firebase/auth';
-import { useAuth } from '../hooks/useAuth';
-import { db, updateUser } from '../../firebase/firebase-api';
+import { useAuth } from '../../../hooks/useAuth';
+import { db, updateUser } from '../../../../firebase/firebase-api';
 import { doc } from 'firebase/firestore';
 import {
   Checkbox,
@@ -25,8 +25,8 @@ import {
 } from '@mui/material';
 import { CloseOutlined } from '@mui/icons-material';
 import { getFunctions, httpsCallable } from 'firebase/functions';
-import Button from './UI_Elements/Button';
-import useAnalytics, { EventName } from '../hooks/useAnalytics';
+import Button from '../../UI_Elements/Button';
+import useAnalytics, { EventName } from '../../../hooks/useAnalytics';
 
 interface MenuProps {
   handleClose: () => void;
