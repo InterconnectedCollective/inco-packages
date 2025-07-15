@@ -24,14 +24,14 @@ import useAnalytics, { EventName } from '../../hooks/useAnalytics';
 // TODO: conditional color changing for dark vs light since theme colors do not match
 
 // getting a number so we don't have to hard code and continuously update the list of possible phrases
-let length: number = Object.keys(phrases).length;
+const length: number = Object.keys(phrases).length;
 
 // gives us unique numbers that will correspond to the phrases to populate the board
 function pickUniqueNumbers(): number[] {
-  let uniqueNumbers: Set<number> = new Set();
+  const uniqueNumbers: Set<number> = new Set();
 
   while (uniqueNumbers.size <= 25) {
-    let randomNumber: number = Math.floor(Math.random() * length) + 1;
+    const randomNumber: number = Math.floor(Math.random() * length) + 1;
     uniqueNumbers.add(randomNumber);
   }
 
@@ -58,7 +58,6 @@ const Board: React.FC = () => {
 
   // so it makes sure to tell user to play again
   const [loginOpen, setLoginOpen] = useState<boolean>(false);
-  const [usernameOpen, setUsernameOpen] = useState<boolean>(false);
   const [submitScoreOpen, setSubmitScoreOpen] = useState<boolean>(false);
   const [openHowTo, SetHowTo] = useState<boolean>(false);
 
@@ -100,14 +99,12 @@ const Board: React.FC = () => {
     setConfetti(false);
     setLoginOpen(false);
     setLoginOpen(false);
-    setUsernameOpen(false);
     setSubmitScoreOpen(false);
     setBingoResult(undefined);
   }
 
   function onLoginSuccess(): void {
     setLoginOpen(false);
-    setUsernameOpen(true);
   }
 
   function checkBingo(): BingoResult {
@@ -173,10 +170,6 @@ const Board: React.FC = () => {
 
   const handleClose = () => {
     setLoginOpen(false);
-  };
-
-  const handleUsernameClose = () => {
-    setUsernameOpen(false);
   };
 
   const handleScoreSubmissionClose = () => {
