@@ -30,7 +30,7 @@ const User: React.FC = () => {
   // We need to add validation. We need to know if the username already exists
   // Open questions: what do we do if it does exist?
 
-  function showUserMenu(event: React.MouseEvent<HTMLElement>) {
+  function showUserMenu(event: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLDivElement> ) {
     setShowMenu(true);
     setAnchorEl(event.currentTarget);
   }
@@ -56,7 +56,7 @@ const User: React.FC = () => {
             onKeyDown={(e) => {
               if (e.code === "Enter") {
                 e.preventDefault();
-                showUserMenu;
+                showUserMenu(e);
               }
             }}
             aria-label="user-menu-button"
