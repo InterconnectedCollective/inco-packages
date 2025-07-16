@@ -47,6 +47,7 @@ export default defineConfig([
       semi: ['error', 'always'],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/no-unused-vars': 'warn',
+      'react/display-name': 'off',
     },
   },
 ]);
