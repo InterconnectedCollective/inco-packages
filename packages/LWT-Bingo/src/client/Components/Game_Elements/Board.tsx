@@ -21,8 +21,6 @@ import useAnalytics, { EventName } from '../../hooks/useAnalytics';
 
 // this component emcompases the bingo game board, buttons, and related functions for gameplay
 
-// TODO: conditional color changing for dark vs light since theme colors do not match
-
 // getting a number so we don't have to hard code and continuously update the list of possible phrases
 const length: number = Object.keys(phrases).length;
 
