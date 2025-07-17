@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-import {
-  useForm,
-  SubmitHandler,
-  FieldError,
-  Controller,
-} from 'react-hook-form';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { getAuth, signOut } from 'firebase/auth';
 import { useAuth } from '../../../hooks/useAuth';
 import { db, updateUser } from '../../../../firebase/firebase-api';
@@ -197,7 +192,7 @@ const UserMenu = React.forwardRef(function (
               placeholder={isBusy ? 'Getting random name...' : undefined}
               error={!!errors.username}
               helperText={errors.username?.message}
-              sx={{ width: '552px' }}
+              fullWidth
             />
             <div style={{ flex: 1 }} />
             <Button
