@@ -1,6 +1,9 @@
 name: Playwright Tests
 on:
-  [pull_request, push, workflow_dispatch]
+  [workflow_dispatch]
+# add these after testing workflow_dispatch:
+#  [pull_request, push, workflow_dispatch]
+
 
 jobs:
   test:
