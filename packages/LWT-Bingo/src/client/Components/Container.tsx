@@ -13,6 +13,12 @@ export default function Container() {
 
   const isMobile: boolean = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const isLandscape: boolean = useMediaQuery('(orientation: landscape)');
+
+  const isTablet: boolean = useMediaQuery(theme.breakpoints.down('lg'));
+
+  const isLandscapeMobile: boolean = isLandscape && isTablet;
+
   return (
     <Box
       height={'100vh'}
@@ -38,8 +44,8 @@ export default function Container() {
         display="flex"
         gap={2}
         justifyContent={'center'}
-        alignItems={'flex-start'}
-        flexDirection={isMobile ? 'column' : 'row'}
+        alignItems={isMobile || isLandscapeMobile ? 'center' : 'flex-start'}
+        flexDirection={isMobile || isLandscapeMobile ? 'column' : 'row'}
       >
         <Board />
         <Leaderboard />
