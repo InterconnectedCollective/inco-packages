@@ -17,8 +17,8 @@ function home_url(): string {
     console.log("Using production url https://incocollective.com/");
     return 'https://incocollective.com/';
   } else {
-    console.log("Using local url http://localhost:3000/");
-    return 'http://localhost:3000/';
+    console.log("Using local url http://localhost:5173/");
+    return 'http://localhost:5173/';
   }
 }
 
