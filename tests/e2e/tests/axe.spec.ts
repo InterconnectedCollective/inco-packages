@@ -7,7 +7,7 @@ import { parse } from 'csv-parse/sync'
 
 test.describe('Test pages with axe', () => {
 
-  const scanPages = parse(fs.readFileSync(path.join(__dirname, '..', 'test-data', 'scanpages.csv')), {
+  const scanPages = parse(fs.readFileSync(path.join(__dirname, '..', 'axe-test-data', 'scanpages.csv')), {
     columns: true,
     skip_empty_lines: true
   })
