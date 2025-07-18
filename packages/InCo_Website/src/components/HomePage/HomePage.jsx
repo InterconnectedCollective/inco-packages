@@ -15,7 +15,7 @@ import imageAssets from "../../utils/Utils";
  */
 const HomePage = () => {
     return (
-        <div className="HomePage">
+        <div className="HomePage" role="main">
             <section className="HomePage-hero container">
                 <div className="HomePage-hero-left">
                     <h1>We Are InCo.</h1>

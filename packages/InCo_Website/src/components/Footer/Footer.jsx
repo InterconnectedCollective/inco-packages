@@ -6,7 +6,7 @@ import NewsletterForm from "./NewsletterForm";
 const Footer = () => {
    return (
       <>
-         <div className="Footer">
+         <div className="Footer" role="contentinfo">
             <div className="row footer-row">
                <div className="logo-frame">
                   <a href="/" aria-label="Homepage">
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
          </div>
 
-         <div className="Footer-mobile">
+         <div className="Footer-mobile" role="contentinfo">
             <div className="row footer-row">
                <div className="logo-frame">
                   <img src={imageAssets.logo} alt="" className="footer-logo" loading="lazy" width="390" height="263" />
