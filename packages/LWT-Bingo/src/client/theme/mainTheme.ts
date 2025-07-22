@@ -40,7 +40,7 @@ const greenBase = '#92D050';
 const yellowBase = '#FFC000';
 const grayBase = '#575757';
 
-let mainTheme = extendTheme({
+const mainTheme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
@@ -103,6 +103,9 @@ let mainTheme = extendTheme({
     fontFamily: ['Roboto', 'Lalezar', 'Poppins'].join(','),
     h1: {
       fontSize: '4.5rem',
+      '@media (max-width:1200px)': {
+        fontSize: '3rem',
+      },
       '@media (max-width:640px)': {
         fontSize: '1.25rem',
       },
@@ -117,7 +120,7 @@ let mainTheme = extendTheme({
       xs: 320, // default 0
       sm: 640, // default 600
       md: 1024, // default 900
-      lg: 1280, // default 1200
+      lg: 1200, // default 1200
       xl: 1536, // default 1536
     },
   },

@@ -4,6 +4,8 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import useAnalytics, { EventName } from '../../hooks/useAnalytics';
 
+import { alpha } from '@mui/material';
+
 type BoxProps = {
   text: any;
   row: number;
@@ -53,13 +55,9 @@ function Square({ text, row, column, gameOver }: BoxProps) {
         fontFamily: 'Poppins',
         borderRadius: '1rem',
         backgroundColor: clicked
-          ? gameOver
-            ? theme.palette.primaryPurple.main // color of disabled clicked buttons
-            : theme.palette.primaryBlue.main // color of clicked buttons
+          ? theme.palette.primaryBlue.main // color of clicked buttons
           : theme.palette.background.default, // color of unclicked buttons
-        border: clicked
-          ? `1px solid ${theme.palette.primary.main}` // color of clicked border
-          : `1px solid ${theme.palette.primary.main}`, // color of unclicked border
+        border: `1px solid ${theme.palette.primary.main}`, // color of unclicked border
         padding: isMobile ? '1px' : '5px',
         color: clicked
           ? theme.palette.primary.contrastText // color of clicked text
@@ -72,6 +70,18 @@ function Square({ text, row, column, gameOver }: BoxProps) {
             : isMobile
             ? '.55rem' // short phrases if on mobile
             : '.875rem', // short phrases if not on mobile
+        '&.Mui-disabled': {
+          background: clicked
+            ? theme.palette.primaryPurple.main // color of disabled clicked buttons
+            : theme.palette.background.default, // color of unclicked buttons
+          color: clicked
+            ? theme.palette.primary.contrastText // color of clicked text
+            : alpha(theme.palette.secondary.contrastText, 0.5), // color of unclicked text
+          border: `1px solid ${alpha(
+            theme.palette.secondary.contrastText,
+            0.5
+          )}`,
+        },
       }}
     >
       {text}
