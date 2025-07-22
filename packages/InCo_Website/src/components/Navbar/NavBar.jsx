@@ -21,7 +21,7 @@ const NavBar = () => {
    return (
       <>
          <MobileNav isOpen={openMenu} closeMenu={closeMobileNav} />
-         <div className="nav-wrapper">
+         <div className="nav-wrapper" role="navigation">
             <div className="nav-content">
                <div className="logo-wrapper">
                   <div className="logo">
