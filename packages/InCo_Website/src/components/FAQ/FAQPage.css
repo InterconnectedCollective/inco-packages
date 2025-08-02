@@ -36,7 +36,6 @@
   font-weight: 500;
   color: black;
   background-color: white;
-  box-shadow: none;
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -44,11 +43,6 @@
 .accordion-button:not(.collapsed) {
   color: black;
   background-color: white;
-  box-shadow: none;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
 }
 
 .accordion-body {
