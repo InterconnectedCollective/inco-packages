@@ -8,10 +8,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import Button from '../UI_Elements/Button';
+import Button from '../../UI_Elements/Button';
 import { CloseOutlined } from '@mui/icons-material';
-import GmailLogin from '../GmailLogin';
-import InvalidBoard from './Content/InvalidBoard';
+import GmailLogin from '../../GmailLogin';
+import InvalidBoard from '../Content/InvalidBoard';
 
 type LoginModalProps = {
   score: number;

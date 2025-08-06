@@ -23,13 +23,13 @@ const Header = React.forwardRef(function ({ toggleTheme }: HeaderProps, ref) {
 
   const theme = useTheme();
 
-  const mode = theme.palette.mode;
-
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const isMobileSmall = useMediaQuery(theme.breakpoints.down('sm'));
+  const isLandscape: boolean = useMediaQuery('(orientation: landscape)');
 
-  const isExtraSmall = useMediaQuery(theme.breakpoints.down('xs'));
+  const isTablet: boolean = useMediaQuery(theme.breakpoints.down('lg'));
+
+  const isLandscapeMobile: boolean = isLandscape && isTablet;
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -40,7 +40,7 @@ const Header = React.forwardRef(function ({ toggleTheme }: HeaderProps, ref) {
 
   return (
     <Box
-      gap={isMobile ? 1 : 5}
+      gap={isMobile || isLandscapeMobile ? 1 : 5}
       py={1}
       px={isMobile ? 2 : ''}
       width="100vw"
