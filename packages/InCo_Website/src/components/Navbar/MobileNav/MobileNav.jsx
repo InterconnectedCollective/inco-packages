@@ -1,4 +1,3 @@
-import React from "react";
 import "./MobileNav.css";
 import { Link } from "react-router-dom";
 
