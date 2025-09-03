@@ -41,16 +41,13 @@ class Bio {
 const TEGAN = new Bio(
   "Tegan Barron",
   "She/They",
-  "Founder",
-  `Tegan Barron has over ten years in Tech, is the Founder of InCo. As a
-  Change Management & future Director | Six Sigma | Lean | Leading global Change
-  Management with Optimization, Modernization, Training, Documentation, and
-  Cross-Functional Teams engagement.`,
+  "Board Member",
+  `I’m the founder & board member of InCo—and the future director your company. I lead global initiatives in optimization, modernization, and cross-functional team engagement. Outside of work, I’m a speaker and the host of Koala-Tea Chats, where real talk meets real connection.`,
   "/headshots/tegan_headshot.jpg",
   "/drawings/tegan_drawing.png",
   undefined,
   "https://www.linkedin.com/in/tegan-barron/",
-  undefined,
+  "https://linktr.ee/teganba",
   undefined,
   undefined,
   undefined,
@@ -62,11 +59,11 @@ const LIZ = new Bio(
   "Liz Baranowicz",
   "She/Her",
   "Lead UX Designer",
-  `UXer with strengths in research, interaction design, and strategy // Lifelong dabbler and lowbrow artist // Unexpected corporate techie​`,
+  `Liz Baranowicz (she/her) is a Richmond-based on-the-job- and self-taught UXer with specialties in user research, interaction design, and stakeholder management. She is a lifelong learner and artist. and is currently pursuing CPACC certification. She currently works as a UX designer and strategist for a Fortune 100 IT distributor. In her personal time, she is obsessed with roller derby and has two perfect dogs named Rip and Roxie.​`,
   "/headshots/liz_headshot.jpg",
   "/drawings/liz_drawing.png",
-  "https://www.lizbaranowicz.com",
   "https://www.linkedin.com/in/liz-baranowicz/",
+  "https://www.lizbaranowicz.com",
   undefined,
   undefined,
   undefined,
@@ -78,14 +75,12 @@ const LIZ = new Bio(
 const LANE = new Bio(
   "Lane Hamilton",
   "She/They",
-  "Frontend Engineer",
-  `I'm a Los Angeles based frontend Software Engineer with experience in
-  developing JavaScript applications using React/ Next.js. Passionate about apps
-  having an aesthetically pleasing design.​`,
+  "Frontend Software Engineer",
+  `Los Angeles based frontend software engineer working in React/ Next.js. Also an avid equestrian and world's okayest surfer.​`,
   "/headshots/lane_headshot.jpg",
   "/drawings/lane_drawing.png",
-  "https://github.com/LaneEcho ",
   "https://www.linkedin.com/in/aleyna-hamilton/",
+  "https://github.com/LaneEcho ",
   undefined,
   undefined,
   undefined,
@@ -321,12 +316,12 @@ const MIRANDA = new Bio(
 const ADA = new Bio(
     "Ada Brewton",
     "They/Them",
-    "Website Accessility",
-    "QA automation engineer and accessibility enthusiast. WA, USA",
+    "Web Accessibility & QA Lead",
+    "QA automation engineer and IAAP-certified digital accessibility tester",
     "/headshots/ada_headshot.jpg",
     undefined,
-    "https://linktr.ee/ada.beeeee",
     "https://www.linkedin.com/in/ada-brewton/",
+    "https://linktr.ee/ada.beeeee",
     undefined,
     undefined,
     undefined,
@@ -334,6 +329,68 @@ const ADA = new Bio(
     "To network and to strengthen my QA and web development skills on an exciting new project.",
     "A new community!",
 );
+
+const LEO = new Bio(
+  "Leo Bonjo",
+  "He/They",
+  "Fullstack Software Engineer",
+  "Hi! I'm Leo, a fullstack engineer with an eye for intuitive user design and sensible data flows. My passions abound, but I mostly focus on building scalable data structures that can turn big ideas into reliable systems. I'm proud to be a member of InCo, where I've been able to build connections with an incredibly talented and supportive team!",
+  "picture path",
+  undefined,
+  "https://www.linkedin.com/in/leo-bonjo/",
+  "https://github.com/LeoBonjo",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+const MADDIE = new Bio(
+  "Madeline Beke",
+  "She/Her",
+  "Frontend Engineer",
+  "I am a Full-Stack Developer with a background in Film & TV Production.",
+  "picture path",
+  undefined,
+  "https://www.linkedin.com/in/madelinebeke",
+  "https://www.madelinebeke.com",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+const ALEJANDRA = new Bio(
+  "Alejandra Robinson",
+  "They/Them",
+  "UX Designer",
+  "I'm Alejandra, a UX Researcher and Designer that combines my backgrounds of Computer Science and English to identify gaps in user experience and make specific design recommendations that are intuitive and clean. My experience across Government, FinTech, Gaming, and Nonprofit help me communicate with all stakeholders across the Software Development Lifecycle in order to make the everyday world a little sweeter.",
+  "picture path",
+  undefined,
+  "https://www.linkedin.com/in/alejandrarobinson",
+  "https://www.alejandrarobinson.com",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+
+const ROCHA = new Bio(
+  "Rocha",
+  "They/Them",
+  "Project Manager",
+  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
+  "picture path",
+  undefined,
+  "https://www.linkedin.com/in/rocha-dollar/",
+  "link 2",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
 
 // make colors for border and hover effects orange
 // const ORANGE = "orange";
@@ -371,6 +428,10 @@ export const BIOS = [
   AMY,
   MIRANDA,
   ADA,
+  LEO,
+  MADDIE,
+  ALEJANDRA,
+  ROCHA
 ];
 
 export const ALUMS = [

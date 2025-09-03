@@ -1,27 +1,66 @@
 .BioCard-purple, .BioCard-orange, .BioCard-blank {
-  position: relative;
+ border: 19.2px solid #FFFFFF;
   z-index: 10;
   text-align: center;
-  padding-bottom: .5rem;
-  width: 40%;
+  background-color: #FFFFFF;
+  min-width: 336px;
+  min-height: 403.2px;
+  max-width: 336px;
+  max-height: 403.2px;
+  /* padding: 19.2px, 19.2px, 86.4px; */
+ box-shadow: 0 14px 8px -8px #0003;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  text-align: center;
   transition-duration: 300ms;
   transition-timing-function: ease-in;
+  backface-visibility: hidden;
+  
+}
+
+.BioCard-links {
+  width: 150px;
+  height: 40px;
+  margin: auto;
+  top: -5%;
+  left: -50px;
+  background: #F1E9A7;
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 1;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  transform: rotate(-25deg); 
+}
+
+.BioCard-links a {
+  text-decoration: none;
+  color: #8B56A0;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 25px;
+}
+
+.BioCard-links a:hover {
+  text-decoration: underline;
+}
+
+.BioCard-Btn {
+  border: none;
+  background-color: transparent;
+}
+
+.react-card-front, .react-card-back  {
+  max-width: 336px;
 }
 
 .BioCard-graphics {
-  position: relative;
-  z-index: 40;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.BioCard-purple:hover {
-  background-color: #7030A0;
-  border-radius: 55px;
-  color: white;
-}
 
 .BioCard-orange:hover {
-  background-color: #FFA629;
-  border-radius: 55px;
   color: black;
 }
 
@@ -41,13 +80,11 @@
 
 .BioCard-purple:hover .BioCard-arrow-purple {
   cursor: pointer;
-  background-color: #7030A0;
   color: white;
 }
 
 .BioCard-orange:hover .BioCard-arrow-orange {
   cursor: pointer;
-  background-color: #FFA629;
   color: white;
 }
 
@@ -60,9 +97,6 @@
   z-index: 0;
   object-fit: cover;
   object-position: 100% 0;
-  border-style: solid;
-  border-width: 5px;
-  border-radius: 55px;
 }
 
 .BioCard-drawing {
@@ -73,9 +107,6 @@
   opacity: 0;
   transition-duration: 300ms;
   transition-timing-function: ease-in;
-  border-style: solid;
-  border-width: 8px;
-  border-radius: 55px;
 }
 
 .BioCard-blank-img {
@@ -105,85 +136,42 @@
   display: block;
 }
 
-.BioCard-arrow-purple {
-  position: absolute;
-  z-index: 30;
-  right: -1.25rem;
-  bottom: -0.938rem;
-  height: 2.75rem;
-  width: 2.75rem;
-  background-color: white;
-  color: #7030A0;
-  border: solid;
-  border-width: 4px;
-  border-radius: 50px;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-}
-
-.BioCard-arrow-orange {
-  position: absolute;
-  z-index: 30;
-  right: -1.25rem;
-  bottom: -0.938rem;
-  height: 2.75rem;
-  width: 2.75rem;
-  background-color: white;
-  color: #FFA629;
-  border: solid;
-  border-width: 4px;
-  border-radius: 50px;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-}
-
 .BioCard-name {
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
-  font-weight: 700;
-  font-family: 'new-science-serif';
-  font-size: 1.375rem;
+    font-family: "Nanum Pen Script", cursive;
+
+  font-size: 30px;
+  font-weight: bold;
+  line-height: normal;
 }
 
 .BioCard-pronouns, .BioCard-role {
-  font-family: 'new-science-serif';
+   font-family: "Nanum Pen Script", cursive;
+
+
 }
 
 .BioCard-pronouns {
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 20px;
+  line-height: 10px;
 }
 
 .BioCard-role {
-  font-size: 1.125rem;
-  font-weight: 400;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.BioCard-Bio {
+  background-color: black;
+  color: white;
+  min-height: 297.6px;
+    font-family: "Nanum Pen Script", cursive;
+padding: 8px;
+  font-size: 22px;
+  text-align: start;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 600px) {
-  /* .BioCard-purple, .BioCard-orange, .BioCard-blank {
-    width: 30%;
-  } */
-
-  .BioCard-headshot {
-    border-width: 8px;
-    border-radius: 55px;
-  }
-
-  .BioCard-arrow-purple {
-    right: 0px;
-    bottom: 0px;
-  }
-
-  .BioCard-arrow-orange {
-    right: 0px;
-    bottom: 0px;
-  }
-
-  .BioCard-pronouns, .BioCard-role {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-}
 
 @media screen and (min-width: 800px) {
   .BioCard-purple, .BioCard-orange, .BioCard-blank {
@@ -195,4 +183,5 @@
   .BioCard-bingo {
     display: none;
   }
+}
 }

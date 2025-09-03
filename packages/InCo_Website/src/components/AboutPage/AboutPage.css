@@ -1,5 +1,6 @@
 .AboutPage {
   margin-bottom: 1rem;
+  background-color: #EFEDEE;
 }
 
 .AboutPage p {
@@ -97,6 +98,23 @@
   margin-left: 4px;
 }
 
+.AboutPage-our-story{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  
+}
+
+.AboutPage-content p {
+  line-height: 35px;
+  margin-left: 2%;
+  
+}
+
+.OurStory-p {
+  margin-right: 20%;
+}
+
 @media screen and (min-width: 600px) {
   .AboutPage-desktop {
     display: block;
@@ -136,6 +154,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.AboutPage-content p{
+  text-align: start;
 }
 
 @media screen and (min-width: 800px) {
