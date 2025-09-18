@@ -55,9 +55,13 @@ function Square({ text, row, column, gameOver }: BoxProps) {
         fontFamily: 'Poppins',
         borderRadius: '1rem',
         backgroundColor: clicked
-          ? theme.palette.primaryBlue.main // color of clicked buttons
-          : theme.palette.background.default, // color of unclicked buttons
-        border: `1px solid ${theme.palette.primary.main}`, // color of unclicked border
+          ? theme.palette.clickedBackground.main // color of clicked buttons
+          : theme.palette.background.secondary, // color of unclicked buttons
+        border: `2px solid ${
+          clicked
+            ? theme.palette.primary.contrastText // color of clicked border
+            : theme.palette.primary.main // color of unclicked border
+        }`,
         padding: isMobile ? '1px' : '5px',
         color: clicked
           ? theme.palette.primary.contrastText // color of clicked text
@@ -72,15 +76,12 @@ function Square({ text, row, column, gameOver }: BoxProps) {
             : '.875rem', // short phrases if not on mobile
         '&.Mui-disabled': {
           background: clicked
-            ? theme.palette.primaryPurple.main // color of disabled clicked buttons
-            : theme.palette.background.default, // color of unclicked buttons
+            ? theme.palette.background.secondary // color of disabled clicked buttons
+            : theme.palette.background.secondary, // color of unclicked buttons
           color: clicked
-            ? theme.palette.primary.contrastText // color of clicked text
-            : alpha(theme.palette.secondary.contrastText, 0.5), // color of unclicked text
-          border: `1px solid ${alpha(
-            theme.palette.secondary.contrastText,
-            0.5
-          )}`,
+            ? theme.palette.secondary.main // color of clicked text
+            : alpha(theme.palette.primary.main, 0.5), // color of unclicked text
+          border: `1px solid ${alpha(theme.palette.primary.main, 0.5)}`,
         },
       }}
     >

@@ -26,6 +26,7 @@ export default function Container() {
       display="flex"
       flexDirection="column"
       alignItems={'center'}
+      overflow={'auto'}
       sx={{
         backgroundColor: theme.palette.background.default,
         // commenting this out so it is easy to update background image in the future

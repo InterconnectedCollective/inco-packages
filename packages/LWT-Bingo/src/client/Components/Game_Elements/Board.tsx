@@ -191,7 +191,7 @@ const Board: React.FC = () => {
 
       <Stack width={'100%'} direction="row" justifyContent="space-evenly">
         <Button
-          variant="primary"
+          variant="secondary"
           onClick={callBingo}
           sx={{
             width: '12rem',
@@ -205,7 +205,7 @@ const Board: React.FC = () => {
 
       <Stack width={'100%'} direction="row" justifyContent="space-evenly">
         <Button
-          variant="secondary"
+          variant="primary-light"
           onClick={showHowTo}
           sx={{
             width: '8rem',
@@ -215,7 +215,7 @@ const Board: React.FC = () => {
         </Button>
 
         <Button
-          variant="secondary"
+          variant="primary-light"
           onClick={handleResetClicked}
           sx={{
             width: '10rem',
@@ -224,6 +224,18 @@ const Board: React.FC = () => {
           Get New Board
         </Button>
       </Stack>
+      <Button
+        component="a"
+        variant="primary"
+        href="https://incocollective.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          width: '15rem',
+        }}
+      >
+        Learn About InCo
+      </Button>
       {loginOpen && (
         <LoginModal
           isOpen={loginOpen}
