@@ -56,7 +56,7 @@ function Square({ text, row, column, gameOver }: BoxProps) {
         borderRadius: '1rem',
         backgroundColor: clicked
           ? theme.palette.clickedBackground.main // color of clicked buttons
-          : theme.palette.background.secondary, // color of unclicked buttons
+          : theme.palette.secondary.contrastText, // color of unclicked buttons
         border: `2px solid ${
           clicked
             ? theme.palette.primary.contrastText // color of clicked border

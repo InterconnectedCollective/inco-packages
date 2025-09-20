@@ -54,7 +54,7 @@ const mainTheme = extendTheme({
   colorSchemes: {
     light: {
       palette: {
-        background: { default: PBRPaleBlue, secondary: '212121' },
+        background: { default: PBRPaleBlue, secondary: '#212121' },
         primary: {
           main: PBRDeepBlue,
           contrastText: '#fff',
