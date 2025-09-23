@@ -114,20 +114,6 @@ const HomePage = () => {
                 </a>
             </section>
             <section className="HomePage-engaging container">
-                <div className="HomePage-engaging-left">
-                    <h2>
-                        Engaging with Lesbians Who Tech
-                    </h2>
-                    <p className="HomePage-paragraph">
-                        Every single member of Interconnected Collective came together
-                        because of Lesbians Who Tech - an inspiring organization
-                        that continues striving for women, women of color, and
-                        nonbinary leaders. We hope to see you at an event!
-                    </p>
-                    <a href="https://lesbianswhotech.org" className="btn btn-info HomePage-pink-btn HomePage-engage-btn">
-                        Learn About LWT
-                    </a>
-                </div>
                 <div className="HomePage-engaging-right">
                     <img
                         src={imageAssets.homepageGraphicLane}
@@ -148,9 +134,7 @@ const HomePage = () => {
                         Not Your Grandma's Bingo!
                     </h2>
                     <p className="HomePage-paragraph">
-                        We created a light hearted game to stay engaged and
-                        connect, all while learning and interacting with
-                        attendees throughout the summit.
+                        We created a light hearted game to stay engaged and connect, all while learning and interacting with other players.
                     </p>
                     <a
                         className="btn btn-primary HomePage-play-bingo-btn"
