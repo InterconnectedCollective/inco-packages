@@ -48,12 +48,7 @@ const Header = React.forwardRef(function ({ toggleTheme }: HeaderProps, ref) {
       justifyContent={'center'}
       alignItems={'center'}
       sx={{ backgroundColor: 'transparent', zIndex: 99 }}
-    >
-      {isMobile ? (
-        <UnofficialSmall aria-hidden="true" />
-      ) : (
-        <Unofficial aria-hidden="true" />
-      )}
+    > 
       <Box
         display="flex"
         flexDirection="column"
@@ -80,14 +75,33 @@ const Header = React.forwardRef(function ({ toggleTheme }: HeaderProps, ref) {
           //   },
           // }}
         >
-          Lesbians Who Tech Bingo
+        THE PEOPLE'S BATTLE OF RICHMOND
         </Typography>
 
-        {isMobile ? (
-          <PresentedByInCoSmall aria-hidden="true" />
-        ) : (
-          <PresentedByInCo aria-hidden="true" />
-        )}
+        <Typography
+          variant="h1"
+          fontFamily={'Lalezar'}
+          color={theme.palette.primaryPink.main}
+          align="center"
+          zIndex={-10}
+        >
+        an online bingo game
+
+        {isMobile ? (<PresentedByInCoSmall aria-hidden="true" />) : (<PresentedByInCo aria-hidden="true" />)}
+        </Typography>
+
+        <Typography
+          variant="h1"
+          fontFamily={'Lalezar'}
+          color={theme.palette.primaryPink.main}
+          align="center"
+          zIndex={-10}
+        >
+          InCo. And River City Roller Derby
+        
+        </Typography>
+
+      
       </Box>
 
       <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
