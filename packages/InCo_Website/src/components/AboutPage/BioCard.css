@@ -18,31 +18,42 @@
   
 }
 
-.BioCard-links {
+.BioCard-link-1, .BioCard-link-2 {
   width: 150px;
   height: 40px;
   margin: auto;
   top: -5%;
-  left: -50px;
   background: #F1E9A7;
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   position: fixed;
   z-index: 1;
+  
+}
+
+.BioCard-link-1 {
+  left: -50px;
   -webkit-transform: rotate(-25deg);
   -moz-transform: rotate(-25deg);
   transform: rotate(-25deg); 
 }
 
-.BioCard-links a {
+.BioCard-link-2 {
+  left: 65%;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  transform: rotate(25deg); 
+}
+
+.BioCard-link-1 a, .BioCard-link-2 a {
   text-decoration: none;
   color: #8B56A0;
   font-family: "Nanum Pen Script", cursive;
   font-size: 25px;
 }
 
-.BioCard-links a:hover {
+.BioCard-link-1 a:hover, .BioCard-link-2 a:hover {
   text-decoration: underline;
 }
 

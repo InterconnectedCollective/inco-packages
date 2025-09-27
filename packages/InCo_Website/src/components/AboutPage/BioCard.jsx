@@ -27,8 +27,11 @@ const BioCard = ({ bio }) => {
             <ReactCardFlip className="characterCard" cardZIndex="0" isFlipped={isFlipped} flipDirection="horizontal">
                 {bio instanceof Bio
                     ? <div className={`BioCard-${bio.color}`} style={{ order: bio.mobileOrder }}>
-                        <div className="BioCard-links">
+                        <div className="BioCard-link-1">
                              {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.linkedIn}>LinkedIn</a></div>}
+                        </div>
+                        <div className="BioCard-link-2">
+                             {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.portfolio}>Portfolio</a></div>}
                         </div>
                         <div
                             onClick={() => setIsFlipped((prev) => !prev)}
