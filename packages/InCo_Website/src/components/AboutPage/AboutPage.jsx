@@ -36,28 +36,32 @@ const AboutPage = () => {
         <div className="AboutPage-our-story">
           <div className="AboutPage-content">
             <h1 style={{ marginBottom: ".5rem" }}>What is InCo?</h1>
-            <p>Interconnected Collective: (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
+            <p><strong>Interconnected Collective:</strong> (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
               experiences that bring people together to grow their skills, experience, and network.</p>
           </div>
           <div className="AboutPage-content">
             <h1 style={{ marginBottom: ".5rem" }}>Our Story</h1>
-            <p className="OurStory-p">
-              What do you get when you combine gaming, digital inclusive integration, and healthy competition at a scale of 15,000
-              LGBTQ+ folks and allies? Founder Tegan Barron answered that question by creating Interconnected Collective and
-              brought along a group of dynamic engineers, content writers, and designers to design an immersive bingo game to
-              engage attendees at the Lesbians Who Tech & Allies conference, 2024. All for the fun of it!
-            </p>
-            <p className="OurStory-p">
-              We at InCo. are inspired by the neuroscience principle “neurons that fire together, wire together” to build a strong team
-              that harnesses community training methodologies and creative collaborations. And just like neurons working together in
-              the brain to power the entire human body, we've curated a suite of tools and techniques designed to build experiences
-              and products to help our community connect and grow together.
-            </p>
+            <div className="OurStory-wrapper">
+              <div className="OurStory-p-wrapper">
+                <p className="OurStory-p">
+                  What do you get when you combine gaming, digital inclusive integration, and healthy competition at a scale of 15,000
+                  LGBTQ+ folks and allies? Founder Tegan Barron answered that question by creating Interconnected Collective and
+                  brought along a group of dynamic engineers, content writers, and designers to design an immersive bingo game to
+                  engage attendees at the Lesbians Who Tech & Allies conference, 2024. All for the fun of it!
+                </p>
+                <p className="OurStory-p">
+                  We at InCo. are inspired by the neuroscience principle “neurons that fire together, wire together” to build a strong team
+                  that harnesses community training methodologies and creative collaborations. And just like neurons working together in
+                  the brain to power the entire human body, we've curated a suite of tools and techniques designed to build experiences
+                  and products to help our community connect and grow together.
+                </p>
+              </div>
+              <img
+                src={logo}
+                alt="InCo logo">
+              </img>
+            </div>
           </div>
-          <img
-            src={logo}
-            alt="InCo logo">
-          </img>
         </div>
       </div>
       <div className="AboutPage-mobile">

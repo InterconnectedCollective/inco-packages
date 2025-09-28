@@ -18,7 +18,7 @@ const BioList = () => {
     return (
         <div className="BioList">
             <div className="BioList-header">
-                <h2>Contributors</h2>
+                <h1>Contributors</h1>
                 <p>
                     Our one-of-a-kind group of techies who left an impression on InCo.
                 </p>
@@ -31,7 +31,7 @@ const BioList = () => {
                 </svg> */}
             </div>
             <div className="BioList-header">
-                <h2>Alumni</h2>
+                <h1>Alumni</h1>
                 <p>
                     Thank you to the alumni of InCo for contributing their talents
                     to the project and helping drive our success.

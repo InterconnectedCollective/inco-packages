@@ -1,6 +1,7 @@
 .BioList {
   position: relative;
   z-index: 10;
+  margin-top: -5%;
 }
 
 .BioList-header {
@@ -20,9 +21,10 @@
   justify-content: center;
   margin-left: 2rem;
   margin-right: 2rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
   column-gap: 6rem;
-  row-gap: 3.5rem;
+  row-gap: 4.5rem;
 }
 
 .BioList-bingo {
