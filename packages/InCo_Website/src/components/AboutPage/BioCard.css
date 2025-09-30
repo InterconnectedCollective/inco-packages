@@ -20,7 +20,7 @@
 
 .BioCard-link-1, .BioCard-link-2 {
   width: 150px;
-  height: 40px;
+  height: 4rem;
   margin: auto;
   top: -5%;
   background: #F1E9A7;
@@ -29,7 +29,33 @@
   box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   position: fixed;
   z-index: 1;
+
+  &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -2rem;
+        height: 100%;
+        width: 2rem;
+        background: linear-gradient(45deg, #F1E9A7 1rem, transparent 0),
+            linear-gradient(135deg, #F1E9A7 1rem, transparent 0);
+        background-size: 2rem 2rem;
+    }
   
+}
+
+.BioCard-link-1, .BioCard-link-2 {
+  &::before {
+    content: '';
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        height: 100%;
+        width: 2rem;
+        background: linear-gradient(-45deg, #F1E9A7 1rem, transparent 0),
+            linear-gradient(-135deg, #F1E9A7 1rem, transparent 0);
+        background-size: 2rem 2rem;
+  }
 }
 
 .BioCard-link-1 {
@@ -50,7 +76,8 @@
   text-decoration: none;
   color: #8B56A0;
   font-family: "Nanum Pen Script", cursive;
-  font-size: 25px;
+  font-size: 30px;
+ 
 }
 
 .BioCard-link-1 a:hover, .BioCard-link-2 a:hover {
