@@ -23,10 +23,10 @@
   height: 4rem;
   margin: auto;
   top: -5%;
-  background: #F1E9A7;
+  background: #F1E9A7F3;
   -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
-  box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
   position: fixed;
   z-index: 1;
 
@@ -37,8 +37,8 @@
         right: -2rem;
         height: 100%;
         width: 2rem;
-        background: linear-gradient(45deg, #F1E9A7 1rem, transparent 0),
-            linear-gradient(135deg, #F1E9A7 1rem, transparent 0);
+        background: linear-gradient(45deg, #F1E9A7F3 1rem, transparent 0),
+            linear-gradient(135deg, #F1E9A7F3 1rem, transparent 0);
         background-size: 2rem 2rem;
     }
   
@@ -52,8 +52,8 @@
         left: -2rem;
         height: 100%;
         width: 2rem;
-        background: linear-gradient(-45deg, #F1E9A7 1rem, transparent 0),
-            linear-gradient(-135deg, #F1E9A7 1rem, transparent 0);
+        background: linear-gradient(-45deg, #F1E9A7F3 1rem, transparent 0),
+            linear-gradient(-135deg, #F1E9A7F3 1rem, transparent 0);
         background-size: 2rem 2rem;
   }
 }
@@ -74,14 +74,15 @@
 
 .BioCard-link-1 a, .BioCard-link-2 a {
   text-decoration: none;
-  color: #8B56A0;
+  color: #8B56A0F5;
   font-family: "Nanum Pen Script", cursive;
-  font-size: 30px;
- 
+  font-size: 34px;
+  transition: text-decoration 300ms ease, transform 300ms;
+  text-decoration: wavy underline transparent;
 }
 
 .BioCard-link-1 a:hover, .BioCard-link-2 a:hover {
-  text-decoration: underline;
+  text-decoration-color: #8B56A0F5;
 }
 
 .BioCard-Btn {
