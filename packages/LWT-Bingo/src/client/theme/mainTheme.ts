@@ -121,6 +121,7 @@ const mainTheme = extendTheme({
       'Roboto',
       'Lalezar',
       'Poppins',
+      'Staatliches',
       'KC Neue Teeth',
       'KC Neue Teeth Inked',
     ].join(','),
@@ -130,7 +131,7 @@ const mainTheme = extendTheme({
         fontSize: '3rem',
       },
       '@media (max-width:640px)': {
-        fontSize: '1.25rem',
+        fontSize: '1.75rem',
       },
       '@media (max-width:320px)': {
         fontSize: '.85rem',
@@ -140,8 +141,11 @@ const mainTheme = extendTheme({
       '@media (max-width:1200px)': {
         fontSize: '4rem',
       },
+      '@media (max-width:800px)': {
+        fontSize: '1.25rem',
+      },
       '@media (max-width:640px)': {
-        fontSize: '1.75rem',
+        fontSize: '1.25rem',
       },
       '@media (max-width:320px)': {
         fontSize: '.85rem',

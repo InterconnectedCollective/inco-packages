@@ -63,8 +63,10 @@ function ModeToggle() {
       sx={{
         position: 'absolute',
         left: '20px',
-        top: isMobile ? '5px' : '10px',
         zIndex: 999,
+        ...(isMobile
+          ? { bottom: '20px' } // stick to bottom on mobile
+          : { top: '10px' }), // stick to top on desktop
       }}
     />
   );

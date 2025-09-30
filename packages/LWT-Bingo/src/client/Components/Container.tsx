@@ -37,7 +37,7 @@ export default function Container() {
         backgroundSize: `${isMobile ? '350px 350px' : '750px 750px'}`,
         backgroundPosition: 'top left',
         overflowY: 'auto',
-        padding: '1rem',
+        paddingX: '1rem',
       }}
     >
       <Header />
