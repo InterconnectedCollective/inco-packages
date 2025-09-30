@@ -116,7 +116,13 @@ const mainTheme = extendTheme({
     dark: darkTheme,
   },
   typography: {
-    fontFamily: ['Roboto', 'Lalezar', 'Poppins'].join(','),
+    fontFamily: [
+      'Roboto',
+      'Lalezar',
+      'Poppins',
+      'KC Neue Teeth',
+      'KC Neue Teeth Inked',
+    ].join(','),
     h1: {
       fontSize: '4.5rem',
       '@media (max-width:1200px)': {
@@ -126,7 +132,17 @@ const mainTheme = extendTheme({
         fontSize: '1.25rem',
       },
       '@media (max-width:320px)': {
-        // possibly the smallest screen size
+        fontSize: '.85rem',
+      },
+    },
+    h2: {
+      '@media (max-width:1200px)': {
+        fontSize: '4rem',
+      },
+      '@media (max-width:640px)': {
+        fontSize: '1.75rem',
+      },
+      '@media (max-width:320px)': {
         fontSize: '.85rem',
       },
     },

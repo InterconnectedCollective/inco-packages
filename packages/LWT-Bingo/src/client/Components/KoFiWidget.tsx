@@ -40,7 +40,6 @@ const KoFiWidget = ({ mode }: WidgetProps) => {
       }
       const kofiButton = iframeDoc.querySelector('.kofi-button');
       if (kofiButton) {
-        console.log('kofi button');
         kofiButton.setAttribute(
           'style',
           'box-shadow: none !important; background-color: #DF2634' // hard code color again
