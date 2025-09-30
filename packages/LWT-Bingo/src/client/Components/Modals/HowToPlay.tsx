@@ -13,6 +13,7 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
   const modalRef = useRef(null);
 
   const theme = useTheme();
+  const isDark: boolean = theme.palette.mode === 'dark';
 
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -86,7 +87,12 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
           transform: 'translate(-50%, -50%)',
           width: isMobile ? '100vw' : 'auto',
           height: isMobile ? '85vh' : '60vh',
-          bgcolor: 'background.paper',
+          bgcolor: theme.palette.background.default,
+          color: `${
+            isDark
+              ? theme.palette.secondary.contrastText
+              : theme.palette.primary.main
+          }`,
           padding: '1.5rem',
           borderRadius: '8px',
           overflow: 'scroll',
@@ -99,27 +105,30 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
           alignItems="center"
           spacing={2}
         >
-          <Stack direction="row" spacing={2} justifyContent="space-evenly">
-            <Typography
-              id="modal-modal-title"
-              variant="h4"
-              component="h2"
-              align="center"
-              gutterBottom
-            >
-              How To Play Bingo!
-            </Typography>
+          <Stack direction="row-reverse" width="100%" alignContent="flex-end">
             <IconButton onClick={handleClick}>
-              <CloseOutlined />
+              <CloseOutlined color={isDark ? 'secondary' : 'primary'} />
             </IconButton>
           </Stack>
+
+          <Typography
+            fontFamily={'KC Neue Teeth, Poppins'}
+            id="modal-modal-title"
+            variant="h3"
+            component="h2"
+            align="center"
+            gutterBottom
+          >
+            How To Play Bingo!
+          </Typography>
+
           <Typography
             id="modal-modal-description"
             variant="body1"
             sx={{ mt: '1px' }}
           >
-            The goal is to mark squares on your board
-            to achieve a winning pattern.
+            The goal is to mark squares on your board to achieve a winning
+            pattern.
           </Typography>
           <Typography
             id="modal-modal-description"
@@ -135,8 +144,8 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
             sx={{ mt: '1px' }}
           >
             Each square has a phrase, visual, or experience that might occur
-            during PBR. If you see or hear that thing happen, click
-            on that square on your board to mark it!
+            during PBR. If you see or hear that thing happen, click on that
+            square on your board to mark it!
           </Typography>
           <Typography
             id="modal-modal-description"
@@ -162,7 +171,7 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
             >
               Single line, any direction = 25 points
             </Typography>
-            
+
             <Typography
               id="modal-modal-description"
               variant="body1"
@@ -170,7 +179,6 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
             >
               "Blackout" (all the squares!) = 125 points!
             </Typography>
-            
           </Stack>
           <Typography
             id="modal-modal-description"
@@ -198,7 +206,7 @@ const HowToPlay = React.forwardRef(function ({ close }: HowToPlayProps, ref) {
           </Typography>
           <Button
             variant="contained"
-            size="small"
+            size="large"
             className="resetButton"
             onClick={handleClick}
           >

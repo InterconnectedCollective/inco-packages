@@ -20,17 +20,11 @@ const Header = React.forwardRef(function ({ toggleTheme }: HeaderProps, ref) {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   // const open = Boolean(anchorEl);
-
   const theme = useTheme();
-
   const isDark: boolean = theme.palette.mode === 'dark';
-
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   const isLandscape: boolean = useMediaQuery('(orientation: landscape)');
-
   const isTablet: boolean = useMediaQuery(theme.breakpoints.down('lg'));
-
   const isLandscapeMobile: boolean = isLandscape && isTablet;
 
   // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
