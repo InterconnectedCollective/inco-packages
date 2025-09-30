@@ -71,7 +71,7 @@ function Leaderboard() {
       }}
     >
       <Typography
-        variant={'h4'}
+        variant={'h3'}
         fontFamily={'Lalezar'}
         color={
           theme.palette.mode === 'dark'

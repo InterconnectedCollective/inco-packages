@@ -91,11 +91,12 @@ const mainTheme = extendTheme({
             getContrastRatio(iceBlueBase, '#fff') > 4.5 ? '#fff' : '#000',
         },
         primaryPurple: {
-          main: purpleBase,
-          light: alpha(purpleBase, 0.5),
-          dark: alpha(purpleBase, 0.9),
+          // this is red right now for PBR
+          main: PBRMedRed,
+          light: alpha(PBRMedRed, 0.5),
+          dark: alpha(PBRMedRed, 0.9),
           contrastText:
-            getContrastRatio(purpleBase, '#fff') > 4.5 ? '#fff' : '#000',
+            getContrastRatio(PBRMedRed, '#fff') > 4.5 ? '#fff' : '#000',
         },
         secondaryGreen: {
           main: greenBase,

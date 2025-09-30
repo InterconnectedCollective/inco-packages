@@ -77,7 +77,7 @@ function Square({ text, row, column, gameOver }: BoxProps) {
         '&.Mui-disabled': {
           background: clicked
             ? theme.palette.background.secondary // color of disabled clicked buttons
-            : theme.palette.background.secondary, // color of unclicked buttons
+            : theme.palette.primaryGray.main, // color of unclicked buttons
           color: clicked
             ? theme.palette.secondary.main // color of clicked text
             : alpha(theme.palette.primary.main, 0.5), // color of unclicked text
