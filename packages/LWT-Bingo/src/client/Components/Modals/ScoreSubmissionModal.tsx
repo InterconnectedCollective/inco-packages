@@ -74,7 +74,7 @@ export const ScoreSubmissionModal = ({
             <>
               <Typography variant="h5">
                 Congratulations {user ? user.username : ''}!!! You earned
-                another Bingo at the #LWTSummit!
+                another Bingo!
               </Typography>
               <Typography variant="h5">
                 <strong>Board score: {score} points</strong>
