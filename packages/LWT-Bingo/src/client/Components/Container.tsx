@@ -46,10 +46,10 @@ export default function Container() {
         gap={2}
         justifyContent={'center'}
         /* UNCOMMENT FOR LEADERBOARD NEXT TO BOARD */
-        alignItems={isMobile || isLandscapeMobile ? 'center' : 'flex-start'}
-        flexDirection={isMobile || isLandscapeMobile ? 'column' : 'row'}
-        // alignItems={'center'} // leaderboard below board all screen sizes
-        // flexDirection={'column'} // leaderboard below board all screen sizes
+        // alignItems={isMobile || isLandscapeMobile ? 'center' : 'flex-start'}
+        // flexDirection={isMobile || isLandscapeMobile ? 'column' : 'row'}
+        alignItems={'center'} // leaderboard below board all screen sizes
+        flexDirection={'column'} // leaderboard below board all screen sizes
       >
         <Board />
         <Leaderboard />
