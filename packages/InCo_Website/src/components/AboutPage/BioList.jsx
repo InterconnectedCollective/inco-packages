@@ -38,7 +38,14 @@ const BioList = () => {
                 </p>
             </div>
             <div className="BioList-bios">
-                {ALUMS.map((bio, idx) => <BioCard key={idx} bio={bio} />)}
+                {ALUMS.map((bio, idx) =>
+                    <>
+                        <div className="BioList-alums">
+                            <h2>{bio.name} ({bio.pronouns})</h2>
+                            <h3>{bio.role}</h3>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );

@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  background-color: #EFEDEE;
 }
 
 @media (min-width: 1400px) {

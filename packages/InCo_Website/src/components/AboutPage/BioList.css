@@ -23,12 +23,16 @@
   margin-right: 2rem;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  column-gap: 10rem;
+  column-gap: 7rem;
   row-gap: 4.5rem;
 }
 
 .BioList-bingo {
   display: none;
+}
+
+.BioList-alums h2{
+border-bottom: solid 5px #8B56A0;
 }
 
 @media screen and (min-width: 1000px) {

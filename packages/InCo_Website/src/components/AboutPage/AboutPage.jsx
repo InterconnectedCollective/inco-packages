@@ -30,12 +30,9 @@ const AboutPage = () => {
   return (
     <div className="AboutPage">
       <div className="AboutPage-desktop">
-        <section className="AboutPage-header">
-          <img src={headerBackground} alt="Three InCo members' headshots on an orange background" fetchpriority="high" />
-        </section>
-        <div className="AboutPage-our-story">
+        <div className="AboutPage-our-story"style={{ paddingTop: "12rem" }}>
           <div className="AboutPage-content">
-            <h1 style={{ marginBottom: ".5rem" }}>What is InCo?</h1>
+            <h1 >What is InCo?</h1>
             <p><strong>Interconnected Collective:</strong> (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
               experiences that bring people together to grow their skills, experience, and network.</p>
           </div>
