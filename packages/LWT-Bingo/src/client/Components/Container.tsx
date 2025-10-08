@@ -5,7 +5,7 @@ import { Box } from '@mui/material/';
 import Header from './Header';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Leaderboard from './Leaderboard/Leaderboard';
-import DarkBG from '../../assets/background/PBR_BG_DARK.png';
+import DarkBG from '../../assets/background/PBR_BG_Dark.png';
 import LightBG from '../../assets/background/PBR_BG_Light.png';
 
 export default function Container() {
