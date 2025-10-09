@@ -11,6 +11,7 @@
     transition: all 0.3s ease;
     transform: translateX(-100vw);
     z-index: 0;
+    visibility: hidden;
 }
 
 .mobile-menu-container {
@@ -24,6 +25,7 @@
 .mobile-menu.active {
     opacity: 1;
     transform: translateX(0);
+    visibility: visible;
 }
 
 .logo-wrapper {
