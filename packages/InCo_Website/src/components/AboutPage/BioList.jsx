@@ -41,6 +41,7 @@ const BioList = () => {
                 {ALUMS.map((bio, idx) =>
                     <>
                         <div className="BioList-alums">
+                            
                             <h2>{bio.name} ({bio.pronouns})</h2>
                             <h3>{bio.role}</h3>
                         </div>

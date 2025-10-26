@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BIOS } from "./bios";
 import BioList from "./BioList";
 import "./AboutPage.css";
+import "./BioCard.css"
 import logo from "../../assets/incologo.png";
 import headerBackground from "../../assets/alltogether.png";
 import julianeHeader from "../../assets/juliane-header.png";
 import jimenaHeader from "../../assets/jimena-header.png";
 import weiHeader from "../../assets/wei-header.png";
+import { object } from "joi";
 
 /** Component for AboutPage
  *
@@ -21,18 +24,37 @@ import weiHeader from "../../assets/wei-header.png";
  */
 const AboutPage = () => {
   // console.debug("AboutPage");
+  const getRandomBio = () => {
+    const shuffledBios = [...BIOS].sort(() => 0.5 - Math.random())
+    return shuffledBios.slice(0, 3);
+  }
 
   const [readMoreShow, setReadMoreShow] = useState(false);
+  const [randomBio, setRandomBio] = useState([]);
 
   const handleShow = () => setReadMoreShow(true);
   const handleHide = () => setReadMoreShow(false);
 
+  useEffect(() => {
+    setRandomBio(getRandomBio());
+  }, []);
+
   return (
     <div className="AboutPage">
       <div className="AboutPage-desktop">
-        <div className="AboutPage-our-story"style={{ paddingTop: "12rem" }}>
+        <div className="AboutPage-our-story" style={{ paddingTop: "12rem" }}>
           <div className="AboutPage-content">
-            <h1 >What is InCo?</h1>
+            <div className="Squiggle-wrapper">
+            {randomBio.map((bio) => (
+              <div className="BioCard-purple">
+                  <img
+                    className="BioCard-headshot img-fluid"
+                    src={bio.photo}
+                    alt={bio.name}
+                  />
+              </div>
+            ))}</div>
+            <h1>What is InCo?</h1>
             <p><strong>Interconnected Collective:</strong> (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
               experiences that bring people together to grow their skills, experience, and network.</p>
           </div>

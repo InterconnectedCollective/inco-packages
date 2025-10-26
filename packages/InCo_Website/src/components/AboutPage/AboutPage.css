@@ -19,6 +19,14 @@
   overflow: hidden;
 }
 
+.Squiggle-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("../../assets/Hero_Squiggle.png");
+ margin-left: -10rem;
+ margin-right: -10rem;
+}
+
 .AboutPage-mobile h1 {
   text-align: center;
 }
@@ -156,12 +164,7 @@
     column-gap: 9.313rem;
   }
 
-  .AboutPage-our-story img {
-    max-width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
 }
 
 .AboutPage-content p{
@@ -175,10 +178,6 @@
     margin-bottom: 5%;
   }
 
-  .AboutPage-our-story img {
-    max-width: 30%;
-    height: 30%;
-  }
 }
 
 @media screen and (min-width: 1400px) {
@@ -186,11 +185,5 @@
     margin-left: 160px;
     margin-right: 160px;
   }
-  .AboutPage-our-story img {
-    max-width: 20%;
-    height: 20%;
-    margin-top: -3%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
 }
