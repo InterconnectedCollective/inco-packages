@@ -36,7 +36,27 @@ const AboutPage = () => {
   const handleHide = () => setReadMoreShow(false);
 
   useEffect(() => {
-    setRandomBio(getRandomBio());
+    const initialBios = getRandomBio();
+    setRandomBio(initialBios);
+
+    const intervalIds = initialBios.map((_, index) => {
+      const randomDelay = 5000 + Math.random() * 5000;
+
+      return setInterval(() => {
+        setRandomBio((prevBios) => {
+          let newBio;
+          do {
+            newBio = BIOS[Math.floor(Math.random() * BIOS.length)];
+          } while (prevBios.some((b) => b.name === newBio.name));
+
+          const updated = [...prevBios];
+          updated[index] = newBio;
+          return updated;
+        });
+      }, randomDelay);
+    });
+
+    return () => intervalIds.forEach(clearInterval);
   }, []);
 
   return (
@@ -45,15 +65,16 @@ const AboutPage = () => {
         <div className="AboutPage-our-story" style={{ paddingTop: "12rem" }}>
           <div className="AboutPage-content">
             <div className="Squiggle-wrapper">
-            {randomBio.map((bio) => (
-              <div className="BioCard-purple">
+              {randomBio.map((bio) => (
+                <div className="Squiggle-biocard">
+                <div key={bio.name} className="BioCard-purple">
                   <img
                     className="BioCard-headshot img-fluid"
                     src={bio.photo}
                     alt={bio.name}
                   />
-              </div>
-            ))}</div>
+                </div></div>
+              ))}</div>
             <h1>What is InCo?</h1>
             <p><strong>Interconnected Collective:</strong> (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
               experiences that bring people together to grow their skills, experience, and network.</p>

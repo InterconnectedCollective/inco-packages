@@ -50,7 +50,7 @@ const BioCard = ({ bio }) => {
                                     alt={bio.name}
                                     loading="lazy"
                                 />
-                                {bio.drawing &&
+                                {bio.greyscale &&
                                     <img
                                         className="BioCard-drawing img-fluid"
                                         // style={{
@@ -58,7 +58,7 @@ const BioCard = ({ bio }) => {
                                         //         ? "#7030A0"
                                         //         : "#FFA629"
                                         // }}
-                                        src={bio.drawing}
+                                        src={bio.greyscale}
                                         alt={`${bio.name} headshot`}
                                         loading="lazy"
                                     />}

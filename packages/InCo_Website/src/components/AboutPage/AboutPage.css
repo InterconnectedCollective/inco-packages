@@ -23,8 +23,41 @@
   display: flex;
   justify-content: space-evenly;
   background-image: url("../../assets/Hero_Squiggle.png");
- margin-left: -10rem;
- margin-right: -10rem;
+  background-repeat: no-repeat;
+background-size: 100%;
+margin-left: -10rem;
+margin-right: -10rem;
+ padding-bottom: 6rem;
+ 
+}
+
+.Squiggle-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.Squiggle-biocard .BioCard-purple {
+  inset: 0;
+  opacity: 0;
+  animation: crossfade 2.75s ease-in-out forwards;
+}
+
+@keyframes crossfade {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Squiggle-biocard:nth-child(odd) {
+  margin-top: 4rem;
 }
 
 .AboutPage-mobile h1 {
