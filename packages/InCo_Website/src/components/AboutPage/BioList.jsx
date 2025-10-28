@@ -14,7 +14,15 @@ import "./BioList.css";
  */
 const BioList = () => {
     // console.debug("BioList", BIOS);
+    const groupAlums = (alums) => {
+        const pairs = [];
+        for (let i = 0; i < alums.length; i += 2) {
+            pairs.push([alums[i], alums[i + 1]]);
+        }
+        return pairs;
+    };
 
+    const alumsPairs = groupAlums(ALUMS);
     return (
         <div className="BioList">
             <div className="BioList-header">
@@ -37,16 +45,21 @@ const BioList = () => {
                     to the project and helping drive our success.
                 </p>
             </div>
-            <div className="BioList-bios">
-                {ALUMS.map((bio, idx) =>
-                    <>
-                        <div className="BioList-alums">
-                            
-                            <h2>{bio.name} ({bio.pronouns})</h2>
-                            <h3>{bio.role}</h3>
-                        </div>
-                    </>
-                )}
+            <div className="Alums-wrapper">
+                <div className="AlumsList-bios">
+                    {alumsPairs.map((pair, idx) =>
+                        <>
+                            <div className="Alums-card">
+                                {pair.map((bio, subIdx) => (
+                                    <div key={subIdx} className={`BioList-alums ${subIdx === 0 ? "left" : "right"}`}>
+                                        <h2>{bio.name} ({bio.pronouns})</h2>
+                                        <h3>{bio.role}</h3>
+                                    </div>
+                                ))}
+                            </div>
+                        </>
+                    )}
+                </div>
             </div>
         </div>
     );

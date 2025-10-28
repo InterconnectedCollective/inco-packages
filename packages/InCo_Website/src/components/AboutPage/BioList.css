@@ -15,10 +15,16 @@
   margin-right: auto;
 }
 
-.BioList-bios {
+.BioList-bios, .AlumsList-bios, .Alums-wrapper {
   display: flex;
+}
+
+.BioList-bios, .AlumsList-bios {
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.BioList-bios {
   margin-left: 2rem;
   margin-right: 2rem;
   margin-top: 4rem;
@@ -31,9 +37,56 @@
   display: none;
 }
 
+.AlumsList-bios:nth-child(even) {
+ align-items: start;
+}
 
-.BioList-alums h2{
-border-bottom: solid 5px #8B56A0;
+.AlumsList-bios:nth-child(odd) {
+  align-items: end;
+}
+
+.AlumsList-bios {
+  align-items: center;
+}
+
+.Alums-card {
+  
+  background-position: center;
+  background-size: 50rem;
+  background-repeat: no-repeat;
+  color: #8B56A0;
+  padding: 5rem 16rem;
+  
+}
+
+.Alums-card:nth-child(even) {
+  background-image: url("../../assets/Green_Cloud.png");
+  
+}
+
+.Alums-card:nth-child(odd) {
+  background-image: url("../../assets/Blue_Cloud.png");
+  
+}
+
+.BioList-alums.left {
+  text-align: end;
+}
+
+.BioList-alums.right {
+  text-align: start;
+  margin-left: -5.5rem;
+}
+
+.BioList-alums h2 {
+  text-decoration: underline;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.BioList-alums h3 {
+  color: black;
+
 }
 
 @media screen and (min-width: 1000px) {
