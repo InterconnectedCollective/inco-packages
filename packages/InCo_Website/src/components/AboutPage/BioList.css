@@ -1,7 +1,7 @@
 .BioList {
   position: relative;
   z-index: 10;
-  margin-top: -5%;
+  margin-top: -5rem;
 }
 
 .BioList-header {
@@ -13,11 +13,13 @@
 .BioList-header p {
   margin-left: auto;
   margin-right: auto;
+ 
 }
 
 .BioList-bios, .AlumsList-bios, .Alums-wrapper {
   display: flex;
 }
+
 
 .BioList-bios, .AlumsList-bios {
   flex-wrap: wrap;
@@ -37,45 +39,55 @@
   display: none;
 }
 
-.AlumsList-bios:nth-child(even) {
- align-items: start;
-}
-
-.AlumsList-bios:nth-child(odd) {
-  align-items: end;
-}
-
 .AlumsList-bios {
   align-items: center;
+  flex-direction: column;
+
+}
+
+.Alums-header-wrapper {
+margin-bottom: 10rem;
+}
+
+.Alums-wrapper {
+ margin-left: 1rem;
+ margin-right: 3rem;
+}
+
+.Alums-wrapper.odd{
+  justify-content: end;
+}
+
+.Alums-wrapper.even {
+  justify-content: start;
 }
 
 .Alums-card {
-  
   background-position: center;
-  background-size: 50rem;
+  background-size: 56rem;
   background-repeat: no-repeat;
   color: #8B56A0;
-  padding: 5rem 16rem;
-  
+  margin-top: -7rem;
+  padding: 6rem 27rem;
+
 }
 
-.Alums-card:nth-child(even) {
+.Alums-card.green{
   background-image: url("../../assets/Green_Cloud.png");
-  
 }
 
-.Alums-card:nth-child(odd) {
+.Alums-card.blue{
   background-image: url("../../assets/Blue_Cloud.png");
-  
 }
 
 .BioList-alums.left {
-  text-align: end;
+  text-align: start;
+  margin-left: -12rem;
 }
 
 .BioList-alums.right {
-  text-align: start;
-  margin-left: -5.5rem;
+  text-align: end;
+  margin-right: -8rem;
 }
 
 .BioList-alums h2 {
@@ -104,6 +116,6 @@
   }
 
   .BioList-header p {
-    width: 50%;
+    width: 60%;
   }
 }

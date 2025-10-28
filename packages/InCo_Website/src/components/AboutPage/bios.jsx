@@ -391,6 +391,36 @@ const ROCHA = new Bio(
   undefined,
   undefined
 )
+const Test1 = new Bio(
+  "Test",
+  "Test",
+  "Test",
+  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
+  "picture path",
+  undefined,
+  undefined,
+  "https://www.linkedin.com/in/rocha-dollar/",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+const Test2 = new Bio(
+  "Test",
+  "Test",
+  "Test",
+  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
+  "picture path",
+  undefined,
+  undefined,
+  "https://www.linkedin.com/in/rocha-dollar/",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
 
 // make colors for border and hover effects orange
 // const ORANGE = "orange";
@@ -441,6 +471,8 @@ export const ALUMS = [
   JULIE,
   LYNDS,
   KD,
+  // Test1,
+  // Test2,
 ];
 
 export { Bio };
