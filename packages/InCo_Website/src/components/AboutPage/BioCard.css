@@ -81,6 +81,7 @@
   font-size: 26px;
   transition: text-decoration 300ms ease, transform 300ms;
   text-decoration: underline transparent;
+  
 }
 
 .BioCard-link-1 a:hover, .BioCard-link-2 a:hover {
