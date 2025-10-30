@@ -369,7 +369,7 @@ const MADDIE = new Bio(
   "Madeline Beke",
   "She/Her",
   "Frontend Engineer",
-  "I am a Full-Stack Developer with a background in Film & TV Production.",
+  "I am a Frontend Developer based in Atlanta, GA.",
   "/headshots/maddie_headshot.jpg",
     "/b&w/maddie_headshot_b&w.jpg",
   undefined,
@@ -414,36 +414,7 @@ const ROCHA = new Bio(
   undefined,
   undefined
 )
-const Test1 = new Bio(
-  "Test",
-  "Test",
-  "Test",
-  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
-  "picture path",
-  undefined,
-  undefined,
-  "https://www.linkedin.com/in/rocha-dollar/",
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined
-)
-const Test2 = new Bio(
-  "Test",
-  "Test",
-  "Test",
-  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
-  "picture path",
-  undefined,
-  undefined,
-  "https://www.linkedin.com/in/rocha-dollar/",
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  undefined
-)
+
 
 // make colors for border and hover effects orange
 // const ORANGE = "orange";
@@ -494,8 +465,6 @@ export const ALUMS = [
   JIMENA,
   AMY,
   MIRANDA,
-  // Test1,
-  // Test2,
 ];
 
 export { Bio };

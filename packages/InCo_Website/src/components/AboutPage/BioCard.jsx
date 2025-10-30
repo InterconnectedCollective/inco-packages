@@ -25,19 +25,49 @@ const BioCard = ({ bio }) => {
     return (
         <>
             <ReactCardFlip className="characterCard" cardZIndex="0" isFlipped={isFlipped} flipDirection="horizontal">
+                {/* Front of card */}
                 {bio instanceof Bio
                     ? <div className={`BioCard-${bio.color}`} style={{ order: bio.mobileOrder }}>
                         <div className="BioCard-link-1">
-                             {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.linkedIn}>LinkedIn</a></div>}
+                            {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.linkedIn}>
+                                LinkedIn
+                                <svg
+                                    className="underline"
+                                    viewBox="0 0 100 5"
+                                    preserveAspectRatio="none"
+                                >
+                                    <path
+                                        d="M0,3 C20,1 80,5 100,3"
+                                        stroke="#8B56A0F5"
+                                        strokeWidth="2"
+                                        fill="transparent"
+                                    />
+                                </svg>
+                            </a>
+                            </div>}
                         </div>
                         <div className="BioCard-link-2">
-                             {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.portfolio}>Portfolio</a></div>}
+                            {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.portfolio}>
+                                Portfolio
+                                <svg
+                                    className="underline"
+                                    viewBox="0 0 100 5"
+                                    preserveAspectRatio="none"
+                                >
+                                    <path
+                                        d="M0,3 C20,1 80,5 100,3"
+                                        stroke="#8B56A0F5"
+                                        strokeWidth="2"
+                                        fill="transparent"
+                                    />
+                                </svg>
+                            </a>
+                            </div>}
                         </div>
                         <div
                             onClick={() => setIsFlipped((prev) => !prev)}
                             className="CardFront"
                         >
-
                             <div className="BioCard-graphics">
                                 <img
                                     className="BioCard-headshot img-fluid"
@@ -79,6 +109,7 @@ const BioCard = ({ bio }) => {
                         <img className="BioCard-blank-hover img-fluid" src={bio.hover} alt={bio.alt} loading="lazy" />
                     </div>
                 }
+                {/* Back of card */}
                 <div onClick={() => setIsFlipped((prev) => !prev)} className="CardBack">
                     <div className={`BioCard-${bio.color}`} style={{ order: bio.mobileOrder }}>
                         <div className="BioCard-Bio">
