@@ -82,21 +82,6 @@ To change the game's dark mode theme, please find the corresponding value in `cl
 
 This keeps it easy for us to update values by keeping them in one location.
 
-## To Do
-
-| Feature                            | Status |
-| ---------------------------------- | ------ |
-| Alert player when they win         | ✅     |
-| Do not reset board on page refresh | ✅     |
-| Separate Modal Component           | ✅     |
-| Updated UI                         | ⏳     |
-| Responsive Design                  | ⏳     |
-| Leaderboard/ Database              | ⏳     |
-| And more...                        | ⏳     |
-
-- ✅ = Ready to use
-- ⏳ = In progress
-
 ## Contributors
 
 |  Developed By  |                                                                                                                                                  |                                                                                                                                                  |
@@ -106,7 +91,7 @@ This keeps it easy for us to update values by keeping them in one location.
 | Jimena Cuadros |  [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jimena-cuadros/)   |   [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jcuadrosj)   |
 |   Alex Sharp   | [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alex-nicole-sharp/) | [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/alexsharp4096) |
 |   Brandi Ude   |     [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/brandiude/)     |    [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bude711)    |
-|  K.D. Hubbard  |    [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/k-d-hubbard/)    |    [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kdhubb)     |
+|  Ada Brewton   |    [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ada-brewton/)    |  [![Github](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ada-beeeee)   |
 
 <!-- Logo Links -->
 

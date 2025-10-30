@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
+import { getAnalytics } from 'firebase/analytics';
 import {
   getFirestore,
   addDoc,
@@ -124,8 +124,8 @@ export const subscribeToTopScores = (
 
 /**
  * Subscribes to the user's rank, score, and username updates.
- * 
- * @param userId 
+ *
+ * @param userId
  * @param onUpdate Callback function to handle updates to the user's data.
  * @param onError Callback function to handle errors.
  * @returns A function to unsubscribe from the updates.
@@ -146,7 +146,7 @@ export const subscribeToUserRank = (
       let userScore: Score = {
         id: undefined,
         totalScore: undefined,
-        username: undefined
+        username: undefined,
       };
 
       snapshot.forEach((doc) => {
@@ -155,7 +155,7 @@ export const subscribeToUserRank = (
           userScore = {
             id: doc.id,
             totalScore: doc.data().totalScore,
-            username: doc.data().username
+            username: doc.data().username,
           };
         }
         rank++;

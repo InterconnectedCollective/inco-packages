@@ -1,2 +1,1 @@
-
-export const GAME_NAME = "bingo";
+export const GAME_NAME = 'bingo';
