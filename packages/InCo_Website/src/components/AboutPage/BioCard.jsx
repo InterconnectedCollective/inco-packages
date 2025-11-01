@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ReactCardFlip from 'react-card-flip';
-import { ArrowRightShort } from "react-bootstrap-icons";
 import "./BioCard.css";
 import { Bio } from "./bios";
-// import BioModal from "./BioModal";
+import RenderBioLinks from "./BioLinks";
 
 
 /** Component for BioCard
@@ -17,6 +16,8 @@ import { Bio } from "./bios";
  *
  * BioList -> BioCard -> BioModal
  */
+
+
 const BioCard = ({ bio }) => {
     // console.debug("BioCard", bio);
 
@@ -28,46 +29,11 @@ const BioCard = ({ bio }) => {
                 {/* Front of card */}
                 {bio instanceof Bio
                     ? <div className={`BioCard-${bio.color}`} style={{ order: bio.mobileOrder }}>
-                        <div className="BioCard-link-1">
-                            {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.linkedIn}>
-                                LinkedIn
-                                <svg
-                                    className="underline"
-                                    viewBox="0 0 100 5"
-                                    preserveAspectRatio="none"
-                                >
-                                    <path
-                                        d="M0,3 C20,1 80,5 100,3"
-                                        stroke="#8B56A0F5"
-                                        strokeWidth="2"
-                                        fill="transparent"
-                                    />
-                                </svg>
-                            </a>
-                            </div>}
-                        </div>
-                        <div className="BioCard-link-2">
-                            {bio.linkedIn && <div className="BioCard-Btn"><a href={bio.portfolio}>
-                                Portfolio
-                                <svg
-                                    className="underline"
-                                    viewBox="0 0 100 5"
-                                    preserveAspectRatio="none"
-                                >
-                                    <path
-                                        d="M0,3 C20,1 80,5 100,3"
-                                        stroke="#8B56A0F5"
-                                        strokeWidth="2"
-                                        fill="transparent"
-                                    />
-                                </svg>
-                            </a>
-                            </div>}
-                        </div>
                         <div
                             onClick={() => setIsFlipped((prev) => !prev)}
                             className="CardFront"
                         >
+                            <RenderBioLinks bio={bio} />
                             <div className="BioCard-graphics">
                                 <img
                                     className="BioCard-headshot img-fluid"
