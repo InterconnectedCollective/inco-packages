@@ -38,6 +38,11 @@ const Footer = () => {
                            Play Bingo
                         </a>
                      </li>
+                     <li className="footer-item">
+                     <a href="https://www.eventbrite.com/o/interconnected-collective-117080660551" >
+                        Events
+                     </a>
+                  </li>
                   </ul>
                </div>
                <div className="col">
