@@ -37,8 +37,9 @@ const AboutPage = () => {
               <RandomCards />
             </div>
             <h1>What is InCo?</h1>
+            <div className="Definition-content">
             <p><strong>Interconnected Collective:</strong> (Noun) A team of designers, engineers, and gamers dedicated to fostering community for LGBTQ+ folks by creating digital
-              experiences that bring people together to grow their skills, experience, and network.</p>
+              experiences that bring people together to grow their skills, experience, and network.</p></div>
           </div>
           <div className="AboutPage-content">
             <h1 style={{ marginBottom: ".5rem" }}>Our Story</h1>

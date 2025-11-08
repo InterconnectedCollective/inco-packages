@@ -127,10 +127,7 @@
   gap: 1rem;
   background-image: url("../../assets/Hero_Squiggle.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  margin-left: -10rem;
-  margin-right: -10rem;
-  padding-bottom: 6rem;
+padding-bottom: 7rem;
 }
 
 .Squiggle-biocard .BioCard-purple {
@@ -139,9 +136,7 @@
   animation: crossfade 2.75s ease-in-out forwards;
 }
 
-.Squiggle-biocard:nth-child(odd) {
-  margin-top: 4rem;
-}
+
 
 /* ================================
    ANIMATIONS
@@ -178,6 +173,10 @@
     display: none;
   }
 
+  .Squiggle-biocard:nth-child(odd) {
+    margin-top: -2rem;
+    margin-bottom: -3rem;
+  }
 
   .AboutPage-our-story {
     position: relative;
@@ -189,8 +188,19 @@
     column-gap: 9.313rem;
   }
 
+  .OurStory-p-wrapper,
+  .Definition-content {
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+
   .OurStory-wrapper {
     flex-wrap: wrap;
+  }
+
+  .OurStory-wrapper img {
+    max-width: 40%;
+    margin-bottom: 3rem;
   }
 
   .OurStory-p {
@@ -209,6 +219,10 @@
 
 /* ≥ 1400px (Large Desktop) */
 @media screen and (min-width: 1400px) {
+  .Squiggle-biocard:nth-child(odd) {
+    margin-top: 5rem;
+  }
+
   .AboutPage-our-story {
     margin-left: 160px;
     margin-right: 160px;
@@ -219,7 +233,18 @@
 
   }
 
+  .OurStory-wrapper img {
+    margin-top: -3rem;
+  }
+
   .OurStory-p {
     margin-right: 2rem;
+  }
+
+  .Squiggle-wrapper {
+    background-size: 100%;
+    margin-left: -10rem;
+    margin-right: -10rem;
+    
   }
 }
