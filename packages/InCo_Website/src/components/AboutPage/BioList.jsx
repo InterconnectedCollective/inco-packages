@@ -45,7 +45,8 @@ const BioList = () => {
                         Thank you to the alumni of InCo for contributing their talents
                         to the project and helping drive our success.
                     </p>
-                </div></div>
+                </div>
+            </div>
             {alumsPairs.map((pair, idx) =>
                 <>
                     <div key={idx} className={`Alums-wrapper ${idx % 2 == 0 ? "even" : "odd"}`}>

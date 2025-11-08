@@ -1,46 +1,69 @@
+/* =========================
+   BIOCARD BASE STYLES
+========================= */
+
 .BioCard-purple,
 .BioCard-orange,
 .BioCard-blank {
-  border: 19.2px solid #FFFFFF;
-  z-index: 10;
-  text-align: center;
   background-color: #FFFFFF;
+  border: 19.2px solid #FFFFFF;
+  box-shadow: 0 15px 8px -8px #0003;
+  text-align: center;
   min-width: 336px;
   min-height: 403.2px;
   max-width: 336px;
   max-height: 403.2px;
-  /* padding: 19.2px, 19.2px, 86.4px; */
-  box-shadow: 0 15px 8px -8px #0003;
-  transition: transform 1s;
+  z-index: 10;
+  transition: transform 1s ease-in;
   transform-style: preserve-3d;
-  text-align: center;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
   backface-visibility: hidden;
-
 }
 
-
+/* =========================
+   CARD FACES
+========================= */
 
 .react-card-front,
 .react-card-back {
   max-width: 336px;
 }
 
+/* =========================
+   CARD HEADSHOTS
+========================= */
+
 .BioCard-graphics {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.BioCard-headshot,
+.BioCard-blank-img {
+  position: relative;
+  z-index: 0;
+  object-fit: cover;
+  object-position: 100% 0;
+  transition: opacity 300ms ease-in;
+}
+
+.BioCard-drawing,
+.BioCard-blank-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+/* =========================
+   Hover States
+========================= */
 
 .BioCard-orange:hover {
   color: black;
 }
 
-.BioCard-purple:hover .BioCard-drawing {
-  opacity: 1;
-  cursor: pointer;
-}
-
+.BioCard-purple:hover .BioCard-drawing,
 .BioCard-purple:hover .BioCard-blank-hover {
   opacity: 1;
   cursor: pointer;
@@ -50,11 +73,7 @@
   opacity: 0;
 }
 
-.BioCard-purple:hover .BioCard-arrow-purple {
-  cursor: pointer;
-  color: white;
-}
-
+.BioCard-purple:hover .BioCard-arrow-purple,
 .BioCard-orange:hover .BioCard-arrow-orange {
   cursor: pointer;
   color: white;
@@ -64,63 +83,21 @@
   fill: white;
 }
 
-.BioCard-headshot {
-  position: relative;
-  z-index: 0;
-  object-fit: cover;
-  object-position: 100% 0;
-}
+/* =========================
+   CARD CONTENT
+========================= */
 
-.BioCard-drawing {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  opacity: 0;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-}
-
-.BioCard-blank-img {
-  position: relative;
-  z-index: 0;
-  object-fit: cover;
-  object-position: 100% 0;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-}
-
-.BioCard-blank-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  opacity: 0;
-  transition-duration: 300ms;
-  transition-timing-function: ease-in;
-}
-
-.BioCard-bingo {
-  display: block;
-}
-
-.BioCard-surprise {
-  display: block;
+.BioCard-name,
+.BioCard-pronouns,
+.BioCard-role,
+.BioCard-Bio {
+  font-family: "Nanum Pen Script", cursive;
 }
 
 .BioCard-name {
-  font-family: "Nanum Pen Script", cursive;
-
   font-size: 30px;
   font-weight: bold;
   line-height: normal;
-}
-
-.BioCard-pronouns,
-.BioCard-role {
-  font-family: "Nanum Pen Script", cursive;
-
-
 }
 
 .BioCard-pronouns {
@@ -129,25 +106,27 @@
 }
 
 .BioCard-role {
-  line-height: normal;
   font-size: 25px;
+  line-height: normal;
 }
 
 .BioCard-Bio {
   background-color: black;
   color: white;
+  font-size: 22px;
   min-height: 297.6px;
   max-height: 297.6px;
-  font-family: "Nanum Pen Script", cursive;
   padding: 8px;
-  font-size: 22px;
   text-align: start;
   vertical-align: middle;
   overflow-y: auto;
 }
 
-@media screen and (min-width: 600px) {
+/* =========================
+   BREAKPOINTS
+========================= */
 
+@media screen and (min-width: 600px) {
   @media screen and (min-width: 800px) {
 
     .BioCard-purple,

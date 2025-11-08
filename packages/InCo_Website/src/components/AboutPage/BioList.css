@@ -1,3 +1,7 @@
+/* ================================
+   GENERAL BIO LIST STYLING
+================================== */
+
 .BioList {
   position: relative;
   z-index: 10;
@@ -13,24 +17,26 @@
 .BioList-header p {
   margin-left: auto;
   margin-right: auto;
- 
 }
 
-.BioList-bios, .AlumsList-bios, .Alums-wrapper {
+/* ================================
+   BIO & ALUM LIST LAYOUTS
+================================== */
+
+.BioList-bios,
+.AlumsList-bios,
+.Alums-wrapper {
   display: flex;
 }
 
-
-.BioList-bios, .AlumsList-bios {
+.BioList-bios,
+.AlumsList-bios {
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .BioList-bios {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin: 4rem 2rem;
   column-gap: 7rem;
   row-gap: 4.5rem;
 }
@@ -42,42 +48,62 @@
 .AlumsList-bios {
   align-items: center;
   flex-direction: column;
-
 }
 
 .Alums-header-wrapper {
-margin-bottom: 10rem;
+  margin-bottom: 10rem;
 }
+
+.Alums-header-wrapper p {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+/* ================================
+   ALUM CARDS
+================================== */
 
 .Alums-wrapper {
- margin-left: 1rem;
- margin-right: 3rem;
-}
-
-.Alums-wrapper.odd{
-  justify-content: end;
-}
-
-.Alums-wrapper.even {
-  justify-content: start;
+  margin-left: 1rem;
+  margin-right: 3rem;
 }
 
 .Alums-card {
   background-position: center;
-  background-size: 56rem;
   background-repeat: no-repeat;
   color: #8B56A0;
-  margin-top: -7rem;
-  padding: 6rem 27rem;
-
 }
 
-.Alums-card.green{
+
+
+.BioList-alums h2 {
+  text-decoration: underline;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.BioList-alums h3 {
+  color: black;
+}
+
+/* ================================
+   ALUM CARD SUBCLASSES
+================================== */
+
+.Alums-card.blue {
+  background-image: url("../../assets/Blue_Cloud.png");
+}
+
+.Alums-card.green {
   background-image: url("../../assets/Green_Cloud.png");
 }
 
-.Alums-card.blue{
-  background-image: url("../../assets/Blue_Cloud.png");
+.BioList-alums.left,
+.BioList-alums.right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
 .BioList-alums.left {
@@ -90,18 +116,65 @@ margin-bottom: 10rem;
   margin-right: -8rem;
 }
 
-.BioList-alums h2 {
-  text-decoration: underline;
-  line-height: normal;
-  font-size: 25px;
+/* ================================
+   BREAKPOINTS
+================================== */
+
+/*-SMALL SCREENS (MOBILE)-*/
+@media screen and (min-width: 400px) {
+
+  .OurStory-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Alums-header-wrapper {
+    margin-bottom: -1rem;
+  }
+
+  .Alums-header-wrapper p {
+    text-align: start;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: none;
+  }
+
+  .Alums-card {
+    background-size: 30rem;
+    margin-top: 0;
+    padding: 3rem 15rem 3rem 18rem;
+    margin-left: 2rem;
+  }
+
+  .Alums-wrapper.odd,
+  .Alums-wrapper.even {
+    justify-content: center;
+  }
+
+  .BioList-alums h2,
+  .BioList-alums h3 {
+    font-size: 18px;
+  }
+
+  /*  */
+  .BioList-alums h3 {
+    color: black;
+  }
+
+  .BioList-alums.left {
+    margin-right: -10rem;
+  }
+
+  .BioList-alums.right {
+    margin-left: -10rem;
+  }
+
 }
 
-.BioList-alums h3 {
-  color: black;
-
-}
-
+/*-LARGE SCREENS (DESKTOP)-*/
 @media screen and (min-width: 1000px) {
+
   .BioList-bios {
     margin-left: 5.313rem;
     margin-right: 5.313rem;
@@ -117,5 +190,44 @@ margin-bottom: 10rem;
 
   .BioList-header p {
     width: 60%;
+  }
+
+  .Alums-card {
+    background-size: 56rem;
+    padding: 6rem 27rem;
+    margin-top: -5rem;
+  }
+
+  .Alums-wrapper.odd {
+    justify-content: end;
+  }
+
+  .Alums-wrapper.even {
+    justify-content: start;
+  }
+
+  .BioList-alums h2,
+  .BioList-alums h3 {
+    font-size: 25px;
+  }
+
+  .Alums-header-wrapper {
+    margin-bottom: 10rem;
+  }
+
+  .Alums-header-wrapper p {
+    text-align: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 70ch;
+  }
+
+  .BioList-alums.left {
+    margin-right: 0;
+  }
+
+  .BioList-alums.right {
+    margin-left: 0;
   }
 }

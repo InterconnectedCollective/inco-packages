@@ -7,10 +7,13 @@ const RandomCards = () => {
 
     const getRandomBio = () => {
         const shuffledBios = [...BIOS].sort(() => 0.5 - Math.random())
-        if (screenSize.width < 1000) {
+        if (screenSize.width < 800) {
             return shuffledBios.slice(0, 1);
-        } else
+        } else if (screenSize.width < 1300) {
+            return shuffledBios.slice(0, 2);
+        } else {
             return shuffledBios.slice(0, 3);
+        }
     }
 
     const [randomBio, setRandomBio] = useState([]);
