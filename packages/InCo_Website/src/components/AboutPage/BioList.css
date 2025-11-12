@@ -128,11 +128,11 @@
     justify-content: center;
   }
 
-  .BioList-header p{
-    
+  .BioList-header p {
+
     margin-top: -1rem;
-margin-left: 2rem;
-margin-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .Alums-header-wrapper {
@@ -197,7 +197,7 @@ margin-right: 2rem;
   .Alums-card {
     background-size: 56rem;
     padding: 6rem 27rem;
-    margin-top: -7rem;
+  
   }
 
   .Alums-wrapper.odd {
@@ -231,5 +231,11 @@ margin-right: 2rem;
 
   .BioList-alums.right {
     margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .Alums-card {
+    margin-top: -7rem;
   }
 }

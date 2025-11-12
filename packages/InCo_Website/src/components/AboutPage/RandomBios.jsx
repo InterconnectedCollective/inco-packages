@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BIOS } from "./bios";
 import { useScreenSize } from "../../utils/Utils";
 
@@ -17,29 +17,35 @@ const RandomCards = () => {
     }
 
     const [randomBio, setRandomBio] = useState([]);
+    const switchTimeout = useRef(null);
 
     useEffect(() => {
         const initialBios = getRandomBio();
         setRandomBio(initialBios);
 
-        const intervalIds = initialBios.map((_, index) => {
-            const randomDelay = 5000 + Math.random() * 5000;
+        const switchOneCard = () => {
+            setRandomBio((prevBios) => {
+                if (prevBios.length === 0) return prevBios;
+                
+                const randomIndex = Math.floor(Math.random() * prevBios.length);
 
-            return setInterval(() => {
-                setRandomBio((prevBios) => {
-                    let newBio;
-                    do {
-                        newBio = BIOS[Math.floor(Math.random() * BIOS.length)];
-                    } while (prevBios.some((b) => b.name === newBio.name));
+                let newBio;
+                do {
+                    newBio = BIOS[Math.floor(Math.random() * BIOS.length)];
+                } while (prevBios.some((b) => b.name === newBio.name));
 
-                    const updated = [...prevBios];
-                    updated[index] = newBio;
-                    return updated;
-                });
-            }, randomDelay);
-        });
+                const updated = [...prevBios];
+                updated[randomIndex] = newBio;
+                return updated;
+            });
 
-        return () => intervalIds.forEach(clearInterval);
+            const nextDelay = 3000 + 2000 + Math.random() * 5000;
+            switchTimeout.current = setTimeout(switchOneCard, nextDelay);
+        };
+
+        switchTimeout.current = setTimeout(switchOneCard, 4000);
+
+        return () => clearTimeout(switchTimeout.current);
     }, [screenSize.width]);
 
     return (

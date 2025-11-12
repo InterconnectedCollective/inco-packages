@@ -56,7 +56,7 @@
 }
 
 /* =========================
-   Hover States
+   HOVER STATES
 ========================= */
 
 .BioCard-orange:hover {
@@ -125,15 +125,22 @@
 /* =========================
    BREAKPOINTS
 ========================= */
+  @media screen and (min-width: 400px) {
+    .BioCard-purple,
+    .BioCard-orange,
+    .BioCard-blank {
+      min-width: 336px;
+  min-height: 403.2px;
+  max-width: 336px;
+  max-height: 403.2px;
+    }
+
+  }
 
 @media screen and (min-width: 600px) {
   @media screen and (min-width: 800px) {
 
-    .BioCard-purple,
-    .BioCard-orange,
-    .BioCard-blank {
-      width: 20%;
-    }
+  
   }
 
   @media screen and (min-width: 1000px) {

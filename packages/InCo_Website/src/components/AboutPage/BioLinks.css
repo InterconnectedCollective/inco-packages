@@ -77,9 +77,12 @@
 
   .underline path {
     stroke-dashoffset: 0;
-    transition: stroke-dashoffset 0.15s ease-in;
+    transition: stroke-dashoffset 0.15s ease-out;
   }
 }
+
+
+
 
 .BioCard-Btn {
   border: none;
