@@ -4,7 +4,6 @@ import "./BioCard.css";
 import { Bio } from "./bios";
 import RenderBioLinks from "./BioLinks";
 
-
 /** Component for BioCard
  *
  * Props:
@@ -16,7 +15,6 @@ import RenderBioLinks from "./BioLinks";
  *
  * BioList -> BioCard -> BioModal
  */
-
 
 const BioCard = ({ bio }) => {
     // console.debug("BioCard", bio);

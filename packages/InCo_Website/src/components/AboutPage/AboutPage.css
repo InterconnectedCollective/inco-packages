@@ -1,20 +1,35 @@
-/* ================================
-   ABOUT PAGE - BASE STYLES
-=================================== */
+/*STYLESHEET FOR ./ABOUTPAGE.JSX
+*
+*1. BASE STYLES
+*
+*2. MOBILE ELEMENTS
+*
+*3. SQUIGGLE
+*
+*4. OUR STORY
+*
+*5. ANIMATIONS
+*
+*6. BREAKPOINTS
+*/
 
+/* ================================
+   1. BASE STYLES
+=================================== */
 .AboutPage {
   margin-bottom: 1rem;
   background-color: #EFEDEE;
 }
 
-.AboutPage p {
-  font-size: 1.25rem;
+.AboutPage h1{
+  font-size: 46pt;
 }
 
 .AboutPage-content p {
   text-align: start;
   line-height: 32px;
   margin-left: 2%;
+  font-size: 16pt;
 }
 
 .AboutPage-readmore {
@@ -45,9 +60,8 @@
 }
 
 /* ================================
-   ABOUT PAGE - MOBILE ELEMENTS
+   2. MOBILE ELEMENTS
 =================================== */
-
 .AboutPage-mobile h1 {
   text-align: center;
 }
@@ -100,34 +114,15 @@
 }
 
 /* ================================
-   ABOUT PAGE - OUR STORY SECTION
+   3. SQUIGGLE SECTION
 =================================== */
-
-.AboutPage-our-story {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.OurStory-p {
-  margin-right: 5%;
-}
-
-.OurStory-wrapper {
-  display: flex;
-}
-
-/* ================================
-   SQUIGGLE SECTION
-=================================== */
-
 .Squiggle-wrapper {
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
   background-image: url("../../assets/Hero_Squiggle.png");
   background-repeat: no-repeat;
-padding-bottom: 7rem;
+  padding-bottom: 7rem;
 }
 
 .Squiggle-biocard .BioCard-purple {
@@ -136,12 +131,27 @@ padding-bottom: 7rem;
   animation: crossfade 2s ease-in-out forwards;
 }
 
+/* ================================
+   4. OUR STORY SECTION
+=================================== */
+.AboutPage-our-story {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
+.OurStory-p {
+  font-size: 20pt;
+  margin-right: 5%;
+}
+
+.OurStory-wrapper {
+  display: flex;
+}
 
 /* ================================
-   ANIMATIONS
+   5. ANIMATIONS
 =================================== */
-
 @keyframes crossfade {
   0% {
     opacity: 0;
@@ -159,11 +169,10 @@ padding-bottom: 7rem;
 }
 
 /* ================================
-   BREAKPOINTS
+   6. BREAKPOINTS
 =================================== */
-
 /* ≥ 600px (Tablet / Small Desktop) */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 320px) {
   .AboutPage-desktop {
     display: block;
     margin-top: -10rem;
@@ -245,6 +254,6 @@ padding-bottom: 7rem;
     background-size: 100%;
     margin-left: -10rem;
     margin-right: -10rem;
-    
+
   }
 }

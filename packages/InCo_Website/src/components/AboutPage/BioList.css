@@ -1,7 +1,19 @@
-/* ================================
-   GENERAL BIO LIST STYLING
-================================== */
+/*STYLESHEET FOR ./BIOLIST.JSX
+*
+*1. GENERAL
+*
+*2. BIO & ALUM LAYOUTS
+*
+*3. ALUM CARDS
+*
+*4. ALUM CARD SUBCLASSES
+*
+*5. BREAKPOINTS
+*/
 
+/* ================================
+   1. GENERAL STYLING
+================================== */
 .BioList {
   position: relative;
   z-index: 10;
@@ -17,12 +29,12 @@
 .BioList-header p {
   margin-left: auto;
   margin-right: auto;
+  font-size: 24pt;
 }
 
 /* ================================
-   BIO & ALUM LIST LAYOUTS
+   2. BIO & ALUM LAYOUTS
 ================================== */
-
 .BioList-bios,
 .AlumsList-bios,
 .Alums-wrapper {
@@ -55,15 +67,16 @@
 }
 
 .Alums-header-wrapper p {
+  font-family: gully-medium;
+  font-size: 24pt;
   text-align: center;
   margin: 0 auto;
   max-width: 70ch;
 }
 
 /* ================================
-   ALUM CARDS
+   3. ALUM CARDS
 ================================== */
-
 .Alums-wrapper {
   margin-left: 1rem;
   margin-right: 3rem;
@@ -74,8 +87,6 @@
   background-repeat: no-repeat;
   color: #8B56A0;
 }
-
-
 
 .BioList-alums h2 {
   text-decoration: underline;
@@ -88,9 +99,8 @@
 }
 
 /* ================================
-   ALUM CARD SUBCLASSES
+   4. ALUM CARD SUBCLASSES
 ================================== */
-
 .Alums-card.blue {
   background-image: url("../../assets/Blue_Cloud.png");
 }
@@ -117,11 +127,10 @@
 }
 
 /* ================================
-   BREAKPOINTS
+   5. BREAKPOINTS
 ================================== */
-
 /*-SMALL SCREENS (MOBILE)-*/
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
 
   .OurStory-wrapper {
     display: flex;
@@ -129,10 +138,10 @@
   }
 
   .BioList-header p {
-
     margin-top: -1rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    font-size: 20pt;
   }
 
   .Alums-header-wrapper {
@@ -145,6 +154,7 @@
     margin-left: 2rem;
     margin-right: 2rem;
     max-width: none;
+    font-size: 24pt;
   }
 
   .Alums-card {
@@ -175,7 +185,6 @@
   .BioList-alums.right {
     margin-left: -10rem;
   }
-
 }
 
 /*-LARGE SCREENS (DESKTOP)-*/
@@ -197,7 +206,7 @@
   .Alums-card {
     background-size: 56rem;
     padding: 6rem 27rem;
-  
+
   }
 
   .Alums-wrapper.odd {
@@ -222,7 +231,7 @@
     margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: 70ch;
+    font-size: 24pt;
   }
 
   .BioList-alums.left {

@@ -46,7 +46,7 @@ const TEGAN = new Bio(
   "Board Member",
   `I’m the founder & board member of InCo—and the future director your company. I lead global initiatives in optimization, modernization, and cross-functional team engagement. Outside of work, I’m a speaker and the host of Koala-Tea Chats, where real talk meets real connection.`,
   "/headshots/tegan_headshot.jpg",
- undefined,
+"/b&w/tegan_headshot_b&w.jpg",
   "/drawings/tegan_drawing.png",
   "https://linktr.ee/teganba",
   "https://www.linkedin.com/in/tegan-barron/",

@@ -1,3 +1,15 @@
+/*STYLESHEET FOR ./BIOLINKS.JSX
+*
+*1. BIO CARD LINKS (SHARED)
+*
+*2. INDIVIDUAL LINK POSITIONS
+*
+*3. UNDERLINE ANIMATION
+*/
+
+/* ===================================
+   1. BIO CARD LINKS (Shared)
+=================================== */
 .BioCard-link-1,
 .BioCard-link-2,
 .BioCard-link-solo {
@@ -23,12 +35,19 @@
   z-index: 1;
 }
 
+.BioCard-Btn {
+  border: none;
+  background-color: transparent;
+}
+
+/* ===================================
+   2. INDIVIDUAL LINK POSITIONS
+=================================== */
 .BioCard-link-1 {
   left: -4rem;
   -webkit-transform: rotate(-25deg);
   -moz-transform: rotate(-25deg);
   transform: rotate(-25deg);
-
 }
 
 .BioCard-link-2 {
@@ -43,6 +62,9 @@
   top: -3rem;
 }
 
+/* ===================================
+   3. UNDERLINE ANIMATION
+=================================== */
 .BioCard-link-1 a,
 .BioCard-link-2 a,
 .BioCard-link-solo a {
@@ -79,12 +101,4 @@
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 0.15s ease-out;
   }
-}
-
-
-
-
-.BioCard-Btn {
-  border: none;
-  background-color: transparent;
 }

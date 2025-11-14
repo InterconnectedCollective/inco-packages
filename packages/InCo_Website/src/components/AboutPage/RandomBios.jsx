@@ -2,6 +2,20 @@ import { useState, useEffect, useRef } from "react";
 import { BIOS } from "./bios";
 import { useScreenSize } from "../../utils/Utils";
 
+/** Component for AboutPage
+ *
+ * Props:
+ * - bio: {
+ *        photo,
+ *        name
+ * }
+ *
+ * State:
+ * - randomBio: gets 1-3 bios depending on screen width
+ * -switchTimeout: stores timeout ID for automatic switching between random bios
+ *
+ */
+
 const RandomCards = () => {
     const screenSize = useScreenSize();
 
@@ -26,7 +40,7 @@ const RandomCards = () => {
         const switchOneCard = () => {
             setRandomBio((prevBios) => {
                 if (prevBios.length === 0) return prevBios;
-                
+
                 const randomIndex = Math.floor(Math.random() * prevBios.length);
 
                 let newBio;

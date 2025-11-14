@@ -1,7 +1,21 @@
-/* =========================
-   BIOCARD BASE STYLES
-========================= */
+/*STYLESHEET FOR ./BIOCARD.JSX
+*
+*1. BASE STYLING
+*
+*2. CARD FACES
+*
+*3. CARD HEADSHOTS
+*
+*4. CARD CONTENT
+*
+*5. HOVER STATES
+*
+*6. BREAKPOINTS
+*/
 
+/* =========================
+   1. BASE STYLING
+========================= */
 .BioCard-purple,
 .BioCard-orange,
 .BioCard-blank {
@@ -20,18 +34,16 @@
 }
 
 /* =========================
-   CARD FACES
+   2. CARD FACES
 ========================= */
-
 .react-card-front,
 .react-card-back {
   max-width: 336px;
 }
 
 /* =========================
-   CARD HEADSHOTS
+   3. CARD HEADSHOTS
 ========================= */
-
 .BioCard-graphics {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -56,37 +68,8 @@
 }
 
 /* =========================
-   HOVER STATES
+   4. CARD CONTENT
 ========================= */
-
-.BioCard-orange:hover {
-  color: black;
-}
-
-.BioCard-purple:hover .BioCard-drawing,
-.BioCard-purple:hover .BioCard-blank-hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.BioCard-purple:hover .BioCard-blank-img {
-  opacity: 0;
-}
-
-.BioCard-purple:hover .BioCard-arrow-purple,
-.BioCard-orange:hover .BioCard-arrow-orange {
-  cursor: pointer;
-  color: white;
-}
-
-.BioCard-purple:hover svg {
-  fill: white;
-}
-
-/* =========================
-   CARD CONTENT
-========================= */
-
 .BioCard-name,
 .BioCard-pronouns,
 .BioCard-role,
@@ -123,25 +106,50 @@
 }
 
 /* =========================
-   BREAKPOINTS
+   5. HOVER STATES
 ========================= */
-  @media screen and (min-width: 400px) {
-    .BioCard-purple,
-    .BioCard-orange,
-    .BioCard-blank {
-      min-width: 336px;
-  min-height: 403.2px;
-  max-width: 336px;
-  max-height: 403.2px;
-    }
+.BioCard-orange:hover {
+  color: black;
+}
 
+.BioCard-purple:hover .BioCard-drawing,
+.BioCard-purple:hover .BioCard-blank-hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.BioCard-purple:hover .BioCard-blank-img {
+  opacity: 0;
+}
+
+.BioCard-purple:hover .BioCard-arrow-purple,
+.BioCard-orange:hover .BioCard-arrow-orange {
+  cursor: pointer;
+  color: white;
+}
+
+.BioCard-purple:hover svg {
+  fill: white;
+}
+
+/* =========================
+   6. BREAKPOINTS
+========================= */
+@media screen and (min-width: 400px) {
+
+  .BioCard-purple,
+  .BioCard-orange,
+  .BioCard-blank {
+    min-width: 336px;
+    min-height: 403.2px;
+    max-width: 336px;
+    max-height: 403.2px;
   }
+
+}
 
 @media screen and (min-width: 600px) {
-  @media screen and (min-width: 800px) {
-
-  
-  }
+  @media screen and (min-width: 800px) {}
 
   @media screen and (min-width: 1000px) {
     .BioCard-bingo {
