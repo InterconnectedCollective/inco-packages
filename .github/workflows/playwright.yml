@@ -27,10 +27,13 @@ jobs:
           node-version: lts/*
       - name: Install dependencies
         run: npm ci
+        working-directory: ./tests/e2e
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
+        working-directory: ./tests/e2e
       - name: Run test
         run: npx playwright test ${{ matrix.TEST_SUITE }}.spec.ts
+        working-directory: ./tests/e2e
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
