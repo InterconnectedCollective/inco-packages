@@ -32,7 +32,7 @@ By default, these tests will run against your local environment, using these por
 - Bingo website at http://localhost:8080
 
 If you're using different ports than this, you'll need to change the ports listed in the following files:
-- For `critical.spec.ts`, update the port in the `home_url()` function in that file.
+- For `critical.spec.ts`, update the ports in the `bingo_url()` and `home_url()` functions in that file.
 - For `axe.spec.ts`, update the ports in `axe-test-data/scanpages.csv`.
 
 If you'd like to test against production instead of local, set your TEST_ENV environment variable. In your terminal, run the following:

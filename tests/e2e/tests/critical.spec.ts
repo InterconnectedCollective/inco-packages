@@ -12,6 +12,16 @@ function env(): string {
   }
 }
 
+function bingo_url(): string {
+  if (env() == "production") {
+    console.log("Using production url https://bingo.incocollective.com/");
+    return 'https://bingo.incocollective.com/';
+  } else {
+    console.log("Using local url http://localhost:8080");
+    return 'http://localhost:8080';
+  }
+}
+
 function home_url(): string {
   if (env() == "production") {
     console.log("Using production url https://incocollective.com/");
@@ -22,7 +32,7 @@ function home_url(): string {
   }
 }
 
-test('InCo home page loads', async ({ page }) => {
+test('InCo Home & About pages load', async ({ page }) => {
 
   await page.goto(home_url());
 
@@ -34,3 +44,9 @@ test('InCo home page loads', async ({ page }) => {
 
 });
 
+test('Bingo page loads', async ({ page }) => {
+
+  await page.goto(bingo_url());
+
+  await expect(page).toHaveTitle(/Bingo!/);
+});
