@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, BrowserContext } from '@playwright/test';
 
 require('dotenv').config();
 
@@ -35,18 +35,36 @@ function home_url(): string {
 test('InCo Home & About pages load', async ({ page }) => {
 
   await page.goto(home_url());
-
   await expect(page).toHaveTitle(/Interconnected Collective/);
 
   await page.getByRole('link', { name: 'ABOUT US' }).nth(1).click();
-
-  await page.getByText("Contributors").isVisible()
+  expect(page.getByText("Contributors")).toBeVisible({ timeout: 30000 })
 
 });
 
-test('Bingo page loads', async ({ page }) => {
+test('Bingo home page & login modal load', async ({ page }) => {
 
   await page.goto(bingo_url());
-
   await expect(page).toHaveTitle(/Bingo!/);
+
+  const signInButton = page.getByText("Sign in to track your scores!");
+  await signInButton.click();
+
+  
+  const gmailLoginButton = page.getByText("Gmail Login");
+  const popupPromise = page.waitForEvent('popup');
+  await gmailLoginButton.click();
+  const popup = await popupPromise;
+  await expect(popup.getByRole("textbox", { name: "email" })).toBeVisible({ timeout: 30000 });
+  console.log("Popup title: " + await popup.title());
+  popup.close();
+  
+  page.on("dialog", async (dialog) => {
+    expect(dialog.message()).toContain("Whoops, something went wrong, please try logging in again!");
+  });
+
+  // 
+  // await gmailLoginButton.scrollIntoViewIfNeeded();
+  // await gmailLoginButton.click();
+
 });
