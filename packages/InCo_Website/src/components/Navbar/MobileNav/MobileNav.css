@@ -55,6 +55,10 @@
     animation: fadeIn 2s ease 0s 1 normal forwards;
 }
 
+[aria-label*="open menu"] {
+    visibility: hidden;
+}
+
 .material-symbols-outlined {
     font-size: 2.8rem;
 }
@@ -167,6 +171,12 @@
     min-width: 96%;
 }
 
+@media (max-width: 998px) and (min-width:868px) {
+    [aria-label*="open menu"] {
+        visibility: visible;
+    }
+}
+
 @media(max-width: 869px) and (min-width: 320px) {
     .mobile-menu-container {
         min-width: 55vw;
@@ -184,6 +194,9 @@
         margin-top: 11em;
     }
 
+    [aria-label*="open menu"] {
+        visibility: visible;
+    }
 
     .material-symbols-outlined {
         font-size: 2.8rem;
@@ -193,8 +206,7 @@
         display: block;
     }
 
-    #root>div>div.mobile-menu.active>div>button,
-    #root>div>div.mobile-menu>div>button {
+    #root>div>div.mobile-menu.active>div>button {
         visibility: visible;
     }
 
@@ -211,7 +223,7 @@
         min-width: 100%;
     }
 
-    .menu-btn {
+    [aria-label*="open menu"] {
         visibility: visible;
     }
 
@@ -236,7 +248,7 @@
         padding: 2rem;
     }
 
-    .menu-btn {
+    [aria-label*="open menu"] {
         border-radius: 50%;
         height: 2.6em;
         width: 2.6em;
@@ -272,7 +284,7 @@
         margin-top: 8em;
     }
 
-    .menu-btn {
+    [aria-label*="open menu"] {
         border-radius: 50%;
         height: 2.6em;
         width: 2.6em;
