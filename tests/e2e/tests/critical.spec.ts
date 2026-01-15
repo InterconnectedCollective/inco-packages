@@ -63,7 +63,7 @@ test('Bingo home page & login modal load', async ({ page }) => {
     expect(dialog.message()).toContain("Whoops, something went wrong, please try logging in again!");
   });
 
-  // 
+  // WIP - continue work here after leaderboard is fixed
   // await gmailLoginButton.scrollIntoViewIfNeeded();
   // await gmailLoginButton.click();
 
