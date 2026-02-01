@@ -7,7 +7,7 @@ import {
   BingoResult,
 } from '../../../util/bingo';
 import { useTheme } from '@mui/material';
-import ConfettiExplosion from 'react-confetti-explosion';
+import Confetti from 'react-confetti-boom';
 import Stack from '@mui/material/Stack';
 import { useAuth } from '../../hooks/useAuth';
 import { LoginModal } from '../Modals/User/LoginModal';
@@ -177,7 +177,8 @@ const Board: React.FC = () => {
   return (
     <div className="board" key={phraseIndex.toString()}>
       {confetti && (
-        <ConfettiExplosion
+        <Confetti
+          mode="fall"
           particleCount={500}
           colors={[
             theme.palette.primary.main,
@@ -191,7 +192,7 @@ const Board: React.FC = () => {
 
       <Stack width={'100%'} direction="row" justifyContent="space-evenly">
         <Button
-          variant="primary"
+          variant="secondary"
           onClick={callBingo}
           sx={{
             width: '12rem',
@@ -205,7 +206,7 @@ const Board: React.FC = () => {
 
       <Stack width={'100%'} direction="row" justifyContent="space-evenly">
         <Button
-          variant="secondary"
+          variant="primary-light"
           onClick={showHowTo}
           sx={{
             width: '8rem',
@@ -215,7 +216,7 @@ const Board: React.FC = () => {
         </Button>
 
         <Button
-          variant="secondary"
+          variant="primary-light"
           onClick={handleResetClicked}
           sx={{
             width: '10rem',
@@ -224,6 +225,18 @@ const Board: React.FC = () => {
           Get New Board
         </Button>
       </Stack>
+      <Button
+        component="a"
+        variant="primary"
+        href="https://incocollective.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          width: '15rem',
+        }}
+      >
+        Learn About InCo
+      </Button>
       {loginOpen && (
         <LoginModal
           isOpen={loginOpen}

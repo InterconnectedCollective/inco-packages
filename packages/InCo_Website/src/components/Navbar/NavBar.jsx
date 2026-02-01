@@ -51,6 +51,11 @@ const NavBar = () => {
                         GET INVOLVED
                      </Link>
                   </li>
+                  <li>
+                     <a href="https://www.eventbrite.com/o/interconnected-collective-117080660551" className="menu-item nav-link">
+                        EVENTS
+                     </a>
+                  </li>
                </ul>
                <a href="http://bingo.incocollective.com" className="btn btn-info nav-play-btn">
                      PLAY BINGO
