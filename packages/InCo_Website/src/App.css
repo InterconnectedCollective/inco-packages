@@ -5,15 +5,15 @@
 
 @font-face {
   font-family: benbow;
-  src: url('fonts/Benbow font/Benbow Semibold.ttf') format('truetype');
+  src: url('/fonts/Benbow font/Benbow Semibold.ttf') format('truetype');
 }
 @font-face {
   font-family: gully-regular;
-  src: url('fonts/fonts/ttf/Gully-Regular.ttf') format('truetype');
+  src: url('/fonts/fonts/ttf/Gully-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: gully-medium;
-  src: url('fonts/fonts/ttf/Gully-CDMedium.ttf') format('truetype');
+  src: url('/fonts/fonts/ttf/Gully-CDMedium.ttf') format('truetype');
 }
 
 body {
