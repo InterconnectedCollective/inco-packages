@@ -1,0 +1,104 @@
+/*STYLESHEET FOR ./BIOLINKS.JSX
+*
+*1. BIO CARD LINKS (SHARED)
+*
+*2. INDIVIDUAL LINK POSITIONS
+*
+*3. UNDERLINE ANIMATION
+*/
+
+/* ===================================
+   1. BIO CARD LINKS (Shared)
+=================================== */
+.BioCard-link-1,
+.BioCard-link-2,
+.BioCard-link-solo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 175px;
+  height: 3.5rem;
+  margin: auto;
+  top: -5%;
+  background: #F1E9A7F3;
+  clip-path: polygon(0 0, 8% 5%, 0 10%, 8% 15%, 0 20%, 8% 25%, 0 30%, 8% 35%,
+      0 40%, 8% 45%, 0 50%, 8% 55%, 0 60%, 8% 65%, 0 70%, 8% 75%,
+      0 80%, 8% 85%, 0 90%, 8% 95%, 0 100%,
+      92% 100%, 100% 95%, 92% 90%, 100% 85%, 92% 80%, 100% 75%,
+      92% 70%, 100% 65%, 92% 60%, 100% 55%, 92% 50%, 100% 45%,
+      92% 40%, 100% 35%, 92% 30%, 100% 25%, 92% 20%, 100% 15%,
+      92% 10%, 100% 5%, 92% 0);
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 1;
+}
+
+.BioCard-Btn {
+  border: none;
+  background-color: transparent;
+}
+
+/* ===================================
+   2. INDIVIDUAL LINK POSITIONS
+=================================== */
+.BioCard-link-1 {
+  left: -4rem;
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+
+.BioCard-link-2 {
+  left: 12rem;
+  -webkit-transform: rotate(25deg);
+  -moz-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+
+.BioCard-link-solo {
+  left: 4rem;
+  top: -3rem;
+}
+
+/* ===================================
+   3. UNDERLINE ANIMATION
+=================================== */
+.BioCard-link-1 a,
+.BioCard-link-2 a,
+.BioCard-link-solo a {
+  text-decoration: none;
+  color: #8B56A0F5;
+  font-family: "Nanum Pen Script", cursive;
+  font-size: 26px;
+  position: relative;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  overflow: visible;
+
+  path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.1s ease-out;
+  }
+}
+
+.BioCard-link-1 a:hover,
+.BioCard-link-2 a:hover,
+.BioCard-link-solo a:hover {
+  font-weight: 600;
+
+  .underline path {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.15s ease-out;
+  }
+}

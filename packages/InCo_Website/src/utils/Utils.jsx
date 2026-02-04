@@ -1,6 +1,7 @@
 // import logo from "../assets/4bf039f30053f26e59dae7a848b99ce2.png";
 
 // logo = { logo };
+import { useState, useEffect } from 'react';
 
 const imageAssets = {
    oliviaPortrait: require("../assets/oliviam_headshot_greyscale.jpg"),
@@ -22,5 +23,31 @@ const imageAssets = {
    instagram: require("../assets/instagram.png"),
    bigGaymeHero: require("../assets/Hero_Section_V7.png"),
 };
+
+const useScreenSize = () => {
+   const [screenSize, setScreenSize] = useState({
+      width: window.innerWidth,
+      height: window.innerHeight,
+   });
+
+   useEffect(() => {
+      const handleResize = () => {
+         setScreenSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+         });
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+         window.removeEventListener('resize', handleResize);
+      };
+   }, []);
+
+   return screenSize;
+};
+
+export { useScreenSize };
 
 export default imageAssets;
