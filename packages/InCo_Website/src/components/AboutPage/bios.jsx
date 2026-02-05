@@ -9,6 +9,7 @@ class Bio {
     role="InCo Team Member",
     bio="Bio coming soon.",
     photo=defaultImage,
+    greyscale,
     drawing,
     portfolio,
     linkedIn,
@@ -25,6 +26,7 @@ class Bio {
     this.role = role;
     this.bio = bio;
     this.photo = photo;
+    this.greyscale=greyscale
     this.drawing = drawing;
     this.portfolio = portfolio;
     this.linkedIn = linkedIn;
@@ -41,14 +43,12 @@ class Bio {
 const TEGAN = new Bio(
   "Tegan Barron",
   "She/They",
-  "Founder",
-  `Tegan Barron has over ten years in Tech, is the Founder of InCo. As a
-  Change Management & future Director | Six Sigma | Lean | Leading global Change
-  Management with Optimization, Modernization, Training, Documentation, and
-  Cross-Functional Teams engagement.`,
+  "Board Member",
+  `I’m the founder & board member of InCo—and the future director your company. I lead global initiatives in optimization, modernization, and cross-functional team engagement. Outside of work, I’m a speaker and the host of Koala-Tea Chats, where real talk meets real connection.`,
   "/headshots/tegan_headshot.jpg",
+"/b&w/tegan_headshot_b&w.jpg",
   "/drawings/tegan_drawing.png",
-  undefined,
+  "https://linktr.ee/teganba",
   "https://www.linkedin.com/in/tegan-barron/",
   undefined,
   undefined,
@@ -62,12 +62,13 @@ const LIZ = new Bio(
   "Liz Baranowicz",
   "She/Her",
   "Lead UX Designer",
-  `UXer with strengths in research, interaction design, and strategy // Lifelong dabbler and lowbrow artist // Unexpected corporate techie​`,
-  "/headshots/liz_headshot.jpg",
+  `Liz Baranowicz (she/her) is a Richmond-based on-the-job- and self-taught UXer with specialties in user research, interaction design, and stakeholder management. She is a lifelong learner and artist. and is currently pursuing CPACC certification. She currently works as a UX designer and strategist for a Fortune 100 IT distributor. In her personal time, she is obsessed with roller derby and has two perfect dogs named Rip and Roxie.​`,
+  "/headshots/liz_headshot_2.JPG",
+  "/b&w/liz_headshot_2_b&w.JPG",
   "/drawings/liz_drawing.png",
   "https://www.lizbaranowicz.com",
   "https://www.linkedin.com/in/liz-baranowicz/",
-  undefined,
+ undefined, 
   undefined,
   undefined,
   undefined,
@@ -78,15 +79,14 @@ const LIZ = new Bio(
 const LANE = new Bio(
   "Lane Hamilton",
   "She/They",
-  "Frontend Engineer",
-  `I'm a Los Angeles based frontend Software Engineer with experience in
-  developing JavaScript applications using React/ Next.js. Passionate about apps
-  having an aesthetically pleasing design.​`,
-  "/headshots/lane_headshot.jpg",
+  "Frontend Software Engineer",
+  `Los Angeles based frontend software engineer working in React/ Next.js. Also an avid equestrian and world's okayest surfer.​`,
+  "/headshots/lane_headshot_2.jpeg",
+    "/b&w/Lane_headshot_2_b&w.jpeg",
   "/drawings/lane_drawing.png",
-  "https://github.com/LaneEcho ",
+   "https://github.com/LaneEcho",
   "https://www.linkedin.com/in/aleyna-hamilton/",
-  undefined,
+ undefined,
   undefined,
   undefined,
   undefined,
@@ -100,6 +100,7 @@ const OLIVIAS = new Bio(
   "Lead UI Designer",
   "Dynamic Digital Designer specializing in storytelling to elevate your brand ",
   "/headshots/olivias_headshot.jpeg",
+    "/b&w/olivias_headshot_b&w.jpeg",
   "/drawings/olivias_drawing.png",
   "http://oliviaservaes.com/",
   "https://www.linkedin.com/in/oliviaservaes/",
@@ -117,6 +118,7 @@ const JIMENA = new Bio(
   "Senior Software Eng.",
   "Senior Software Engineer at Signal Advisors | React Expert with a Passion for UI/UX Design | DEIB Advocate | Advocate for Environmental Sustainability | Comp Sci Graduate from Western Michigan University",
   "/headshots/jimena_headshot.jpg",
+    "/b&w/jimena_headshot_b&w.jpg",
   "/drawings/jimena_drawing.png",
   undefined,
   "https://www.linkedin.com/in/jimena-cuadros/ ",
@@ -134,10 +136,11 @@ const LYNDS = new Bio(
   "Illustrator & Lead Visual",
   "I'm a future NYC-based design generalist (previous Chicago) and illustrator emphasizing visual craft and navigating compelling problems. I also love finding what makes users get excited about a product. ",
   "/headshots/lynds_headshot.jpg",
+    "/b&w/lynds_headshot_b&w.jpg",
   "/drawings/lynds_drawing.png",
+  undefined,
   "https://www.lyndslesh.com/",
   "https://www.linkedin.com/in/lyndsey-lesh/",
-  undefined,
   undefined,
   undefined,
   undefined,
@@ -151,6 +154,7 @@ const OLIVIAM = new Bio(
   "Dynamo Marketing",
   "Dynamic marketing professional with proven expertise in driving audience engagement with diverse marketing tools and creative storytelling. ",
   "/headshots/oliviam_headshot.jpg",
+    "/b&w/oliviam_headshot_b&w.jpg",
   "/drawings/oliviam_drawing.png",
   undefined,
   "https://www.linkedin.com/in/omccartney/",
@@ -171,6 +175,7 @@ const JULIANE = new Bio(
   building the interfaces that let end users intuitively interact with data and
   content.`,
   "/headshots/juliane_headshot.png",
+    "/b&w/juliane_headshot_b&w.png",
   "/drawings/juliane_drawing.png",
   "https://julianecassidy.com/",
   "https://www.linkedin.com/in/julianemcassidy/",
@@ -188,6 +193,7 @@ const CHELSEA = new Bio(
   "Fullstack Developer",
   `I am a fullstack software developer with experience in JavaScript, TypeScript, React, and Java Spring Boot. I enjoy working with clients to create intuitive and stylish user interfaces, leveraging my skills to develop efficient, scalable, and visually stunning software solutions.`,
   "/headshots/chelsea_headshot.png",
+    "/b&w/chelsea_headshot_b&w.png",
   "/drawings/chelsea_drawing.png",
   "https://chelseasnider.netlify.app/",
   "https://www.linkedin.com/in/chelsea-snider/",
@@ -205,6 +211,7 @@ const WEI = new Bio(
   "Operations",
   "Production/Operations Director based in NorCal. ",
   "/headshots/wei_headshot.jpeg",
+    "/b&w/wei_headshot_b&w.jpeg",
   "/drawings/wei_drawing.png",
   "http://weimakesgames.carrd.co",
   "http://linkedin.com/in/weiyun",
@@ -222,6 +229,7 @@ const AMY = new Bio(
   "Dynamo Marketing",
   "Marketing Creator and UX Researcher: Driven by Data, Dedicated to User-Centric Strategies​ Houston, TX",
   "/headshots/amy_headshot.JPG",
+    "/b&w/amy_headshot_b&w.JPG",
   "/drawings/amy_drawing.png",
   "https://www.aashmore.com/",
   "https://www.linkedin.com/in/amy-ashmore/",
@@ -239,6 +247,7 @@ const KD = new Bio(
   "Fullstack Developer",
   `I'm a fullstack developer and an avid outdoor sports enthusiast.​`,
   "/headshots/kd_headshot.jpg",
+    "/b&w/kd_headshot_b&w.jpg",
   "/drawings/kd_drawing.png",
   undefined,
   "https://www.linkedin.com/in/k-d-hubbard/",
@@ -256,6 +265,7 @@ const ALEX = new Bio(
   "CX Engineer",
   "I'm a customer success engineer with ten years of experience supporting healthcare software. I have a strong interest in developing tools to improve user productivity for my team.",
   "/headshots/alex_headshot.jpg",
+    "/b&w/alex_headshot_b&w.jpg",
   "/drawings/alex_drawing.png",
   undefined,
   "https://www.linkedin.com/in/alex-nicole-sharp",
@@ -273,6 +283,7 @@ const JULIE = new Bio(
   "UX Designer",
   "UX Designer | UX Researcher | Product Designer | Houston, TX",
   "/headshots/julie_headshot.png",
+    "/b&w/julie_headshot_b&w.png",
   "/drawings/julie_drawing.png",
   "https://julienguyen.framer.website/",
   "https://www.linkedin.com/in/julie-nguyen7",
@@ -290,6 +301,7 @@ const BRANDI = new Bio(
   "Frontend Engineer",
   "NYC based Software Engineer with a background in Theatre Production Management.",
   "/headshots/brandi_headshot.jpg",
+    "/b&w/brandi_headshot_b&w.jpg",
   "/drawings/brandi_drawing.png",
   undefined,
   "https://www.linkedin.com/in/brandiude/",
@@ -307,6 +319,7 @@ const MIRANDA = new Bio(
     "Project Manager",
     "Product Manager, Boston",
     "/headshots/miranda_headshot.jpg",
+      "/b&w/miranda_headshot_b&w.jpg",
     "/drawings/miranda_drawing.png",
     undefined,
     "https://www.linkedin.com/in/mirandasajdak/",
@@ -321,9 +334,10 @@ const MIRANDA = new Bio(
 const ADA = new Bio(
     "Ada Brewton",
     "They/Them",
-    "Website Accessility",
-    "QA automation engineer and accessibility enthusiast. WA, USA",
+    "Web Accessibility & QA Lead",
+    "QA automation engineer and IAAP-certified digital accessibility tester",
     "/headshots/ada_headshot.jpg",
+      "/b&w/ada_headshot_b&w.jpg",
     undefined,
     "https://linktr.ee/ada.beeeee",
     "https://www.linkedin.com/in/ada-brewton/",
@@ -334,6 +348,73 @@ const ADA = new Bio(
     "To network and to strengthen my QA and web development skills on an exciting new project.",
     "A new community!",
 );
+
+const LEO = new Bio(
+  "Leo Bonjo",
+  "He/They",
+  "Fullstack Software Engineer",
+  "Hi! I'm Leo, a fullstack engineer with an eye for intuitive user design and sensible data flows. My passions abound, but I mostly focus on building scalable data structures that can turn big ideas into reliable systems. I'm proud to be a member of InCo, where I've been able to build connections with an incredibly talented and supportive team!",
+  "/headshots/leo_headshot.jpeg",
+    "/b&w/leo_headshot_b&w.jpeg",
+  undefined,
+  "https://github.com/LeoBonjo",
+  "https://www.linkedin.com/in/leo-bonjo/",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+const MADDIE = new Bio(
+  "Madeline Beke",
+  "She/Her",
+  "Frontend Engineer",
+  "I am a Frontend Developer based in Atlanta, GA.",
+  "/headshots/maddie_headshot.jpg",
+    "/b&w/maddie_headshot_b&w.jpg",
+  undefined,
+  "https://www.madelinebeke.com",
+  "https://www.linkedin.com/in/madelinebeke",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+const ALEJANDRA = new Bio(
+  "Alejandra Robinson",
+  "They/Them",
+  "UX Designer",
+  "I'm Alejandra, a UX Researcher and Designer that combines my backgrounds of Computer Science and English to identify gaps in user experience and make specific design recommendations that are intuitive and clean. My experience across Government, FinTech, Gaming, and Nonprofit help me communicate with all stakeholders across the Software Development Lifecycle in order to make the everyday world a little sweeter.",
+  "/headshots/Alejandra_headshot.png",
+    "/b&w/Alejandra_headshot_b&w.png",
+  undefined,
+  "https://www.alejandrarobinson.com",
+  "https://www.linkedin.com/in/alejandrarobinson",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+
+const ROCHA = new Bio(
+  "Rocha",
+  "They/Them",
+  "Project Manager",
+  "Project Specialist Sr 🌱 Bringing Wild Gratitude to Everyday (and LinkedIn’s resident person-shaped raccoon of positivity)",
+  "/headshots/rocha_headshot.jpg",
+    "/b&w/rocha_headshot_b&w.jpg",
+  undefined,
+  undefined,
+  "https://www.linkedin.com/in/rocha-dollar/",
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined
+)
+
 
 // make colors for border and hover effects orange
 // const ORANGE = "orange";
@@ -363,14 +444,12 @@ export const BIOS = [
   TEGAN,
   LANE,
   LIZ,
-  OLIVIAS,
-  JULIANE,
-  ALEX,
-  JIMENA,
   BRANDI,
-  AMY,
-  MIRANDA,
   ADA,
+  LEO,
+  MADDIE,
+  ALEJANDRA,
+  ROCHA
 ];
 
 export const ALUMS = [
@@ -380,6 +459,12 @@ export const ALUMS = [
   JULIE,
   LYNDS,
   KD,
+  OLIVIAS,
+  JULIANE,
+  ALEX,
+  JIMENA,
+  AMY,
+  MIRANDA,
 ];
 
 export { Bio };

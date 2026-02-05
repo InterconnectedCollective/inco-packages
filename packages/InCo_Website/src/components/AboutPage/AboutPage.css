@@ -1,24 +1,67 @@
+/*STYLESHEET FOR ./ABOUTPAGE.JSX
+*
+*1. BASE STYLES
+*
+*2. MOBILE ELEMENTS
+*
+*3. SQUIGGLE
+*
+*4. OUR STORY
+*
+*5. ANIMATIONS
+*
+*6. BREAKPOINTS
+*/
+
+/* ================================
+   1. BASE STYLES
+=================================== */
 .AboutPage {
   margin-bottom: 1rem;
+  background-color: #EFEDEE;
 }
 
-.AboutPage p {
+.AboutPage h1{
+  font-size: 46pt;
+}
+
+.AboutPage-content p {
+  text-align: start;
+  line-height: 32px;
+  margin-left: 2%;
+  font-size: 16pt;
+}
+
+.AboutPage-readmore {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-family: 'new-science-serif', 'sans-serif';
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.AboutPage-desktop {
-  display: none;
+.AboutPage-readmore:hover {
+  cursor: pointer;
 }
 
-.AboutPage-mobile {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+.AboutPage-hide-readmore {
+  background-color: #FFD30026;
+  width: 2.938rem;
+  height: 2.938rem;
+  border-radius: 50px;
 }
 
+.AboutPage-caretdown {
+  margin-top: -5px;
+}
+
+.AboutPage-caretup {
+  margin-top: 2px;
+  margin-left: 4px;
+}
+
+/* ================================
+   2. MOBILE ELEMENTS
+=================================== */
 .AboutPage-mobile h1 {
   text-align: center;
 }
@@ -70,51 +113,78 @@
   z-index: 10;
 }
 
-.AboutPage-readmore {
-  font-size: 1.25rem;
-  font-family: 'new-science-serif', 'sans-serif';
-  font-weight: 700;
-  text-transform: uppercase;
+/* ================================
+   3. SQUIGGLE SECTION
+=================================== */
+.Squiggle-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-image: url("../../assets/Hero_Squiggle.png");
+  background-repeat: no-repeat;
+  padding-bottom: 7rem;
 }
 
-.AboutPage-readmore:hover {
-  cursor: pointer;
+.Squiggle-biocard .BioCard-purple {
+  inset: 0;
+  opacity: 0;
+  animation: crossfade 2s ease-in-out forwards;
 }
 
-.AboutPage-hide-readmore {
-  background-color: #FFD30026;
-  width: 2.938rem;
-  height: 2.938rem;
-  border-radius: 50px;
+/* ================================
+   4. OUR STORY SECTION
+=================================== */
+.AboutPage-our-story {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.AboutPage-caretdown {
-  margin-top: -5px;
+.OurStory-p {
+  font-size: 20pt;
+  margin-right: 5%;
 }
 
-.AboutPage-caretup {
-  margin-top: 2px;
-  margin-left: 4px;
+.OurStory-wrapper {
+  display: flex;
 }
 
-@media screen and (min-width: 600px) {
+/* ================================
+   5. ANIMATIONS
+=================================== */
+@keyframes crossfade {
+  0% {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ================================
+   6. BREAKPOINTS
+=================================== */
+/* ≥ 600px (Tablet / Small Desktop) */
+@media screen and (min-width: 320px) {
   .AboutPage-desktop {
     display: block;
+    margin-top: -10rem;
   }
 
   .AboutPage-mobile {
     display: none;
   }
 
-  .AboutPage-header img {
-    display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: 0px;
-    top: 3.188rem;
-    width: 78%;
-    height: auto;
-    z-index: 10;
+  .Squiggle-biocard:nth-child(odd) {
+    margin-top: -2rem;
+    margin-bottom: -3rem;
   }
 
   .AboutPage-our-story {
@@ -122,45 +192,68 @@
     z-index: 20;
     margin-top: 0%;
     margin-bottom: 15%;
-    margin-left: 80px;
-    margin-right: 80px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 9.313rem;
   }
 
-  .AboutPage-our-story img {
-    max-width: 80%;
-    height: auto;
-    margin-top: 8%;
-    margin-left: auto;
-    margin-right: auto;
+  .OurStory-p-wrapper,
+  .Definition-content {
+    margin-left: 2rem;
+    margin-right: 3rem;
+  }
+
+  .OurStory-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .OurStory-wrapper img {
+    max-width: 40%;
+    margin-bottom: 3rem;
+  }
+
+  .OurStory-p {
+    margin-right: -5%;
   }
 }
 
+/* ≥ 800px (Medium Desktop) */
 @media screen and (min-width: 800px) {
   .AboutPage-our-story {
     flex-wrap: nowrap;
     margin-top: -10%;
     margin-bottom: 5%;
   }
-
-  .AboutPage-our-story img {
-    max-width: 30%;
-    height: 30%;
-  }
 }
 
+/* ≥ 1400px (Large Desktop) */
 @media screen and (min-width: 1400px) {
+  .Squiggle-biocard:nth-child(odd) {
+    margin-top: 5rem;
+  }
+
   .AboutPage-our-story {
     margin-left: 160px;
     margin-right: 160px;
   }
-  .AboutPage-our-story img {
-    max-width: 20%;
-    height: 20%;
-    margin-top: 6%;
-    margin-left: auto;
-    margin-right: auto;
+
+  .OurStory-wrapper {
+    flex-wrap: nowrap;
+
+  }
+
+  .OurStory-wrapper img {
+    margin-top: -3rem;
+  }
+
+  .OurStory-p {
+    margin-right: 2rem;
+  }
+
+  .Squiggle-wrapper {
+    background-size: 100%;
+    margin-left: -10rem;
+    margin-right: -10rem;
+
   }
 }

@@ -7,7 +7,7 @@ import {
   BingoResult,
 } from '../../../util/bingo';
 import { useTheme } from '@mui/material';
-import ConfettiExplosion from 'react-confetti-explosion';
+import Confetti from 'react-confetti-boom';
 import Stack from '@mui/material/Stack';
 import { useAuth } from '../../hooks/useAuth';
 import { LoginModal } from '../Modals/User/LoginModal';
@@ -177,7 +177,8 @@ const Board: React.FC = () => {
   return (
     <div className="board" key={phraseIndex.toString()}>
       {confetti && (
-        <ConfettiExplosion
+        <Confetti
+          mode="fall"
           particleCount={500}
           colors={[
             theme.palette.primary.main,

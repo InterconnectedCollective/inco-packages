@@ -3,11 +3,25 @@
 @import url("https://use.typekit.net/saa1sgu.css");
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+@font-face {
+  font-family: benbow;
+  src: url('/fonts/Benbow font/Benbow Semibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: gully-regular;
+  src: url('/fonts/fonts/ttf/Gully-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: gully-medium;
+  src: url('/fonts/fonts/ttf/Gully-CDMedium.ttf') format('truetype');
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
+  background-color: #EFEDEE;
 }
 
 @media (min-width: 1400px) {
@@ -25,7 +39,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: 'new-science-serif', sans-serif;
+  font-family: 'benbow', sans-serif;
 }
 
 
@@ -56,7 +70,7 @@ li {
 }
 
 p {
-  font-family: 'new-science-serif', sans-serif;
+  font-family: 'gully-regular';
   font-size: 1.50rem;
   line-height: 1.5rem;
 }

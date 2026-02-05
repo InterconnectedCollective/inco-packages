@@ -1,6 +1,23 @@
+/*STYLESHEET FOR ./BIOLIST.JSX
+*
+*1. GENERAL
+*
+*2. BIO & ALUM LAYOUTS
+*
+*3. ALUM CARDS
+*
+*4. ALUM CARD SUBCLASSES
+*
+*5. BREAKPOINTS
+*/
+
+/* ================================
+   1. GENERAL STYLING
+================================== */
 .BioList {
   position: relative;
   z-index: 10;
+  margin-top: -5rem;
 }
 
 .BioList-header {
@@ -12,24 +29,167 @@
 .BioList-header p {
   margin-left: auto;
   margin-right: auto;
+  font-size: 24pt;
+}
+
+/* ================================
+   2. BIO & ALUM LAYOUTS
+================================== */
+.BioList-bios,
+.AlumsList-bios,
+.Alums-wrapper {
+  display: flex;
+}
+
+.BioList-bios,
+.AlumsList-bios {
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .BioList-bios {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 4rem;
-  column-gap: 2.5rem;
-  row-gap: 3.5rem;
+  margin: 4rem 2rem;
+  column-gap: 7rem;
+  row-gap: 4.5rem;
 }
 
 .BioList-bingo {
   display: none;
 }
 
+.AlumsList-bios {
+  align-items: center;
+  flex-direction: column;
+}
+
+.Alums-header-wrapper {
+  margin-bottom: 10rem;
+}
+
+.Alums-header-wrapper p {
+  font-family: gully-medium;
+  font-size: 24pt;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 70ch;
+}
+
+/* ================================
+   3. ALUM CARDS
+================================== */
+.Alums-wrapper {
+  margin-left: 1rem;
+  margin-right: 3rem;
+}
+
+.Alums-card {
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #8B56A0;
+}
+
+.BioList-alums h2 {
+  text-decoration: underline;
+  line-height: normal;
+  font-size: 25px;
+}
+
+.BioList-alums h3 {
+  color: black;
+}
+
+/* ================================
+   4. ALUM CARD SUBCLASSES
+================================== */
+.Alums-card.blue {
+  background-image: url("../../assets/Blue_Cloud.png");
+}
+
+.Alums-card.green {
+  background-image: url("../../assets/Green_Cloud.png");
+}
+
+.BioList-alums.left,
+.BioList-alums.right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.BioList-alums.left {
+  text-align: start;
+  margin-left: -12rem;
+}
+
+.BioList-alums.right {
+  text-align: end;
+  margin-right: -8rem;
+}
+
+/* ================================
+   5. BREAKPOINTS
+================================== */
+/*-SMALL SCREENS (MOBILE)-*/
+@media screen and (min-width: 300px) {
+
+  .OurStory-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .BioList-header p {
+    margin-top: -1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 20pt;
+  }
+
+  .Alums-header-wrapper {
+    margin-bottom: -1rem;
+  }
+
+  .Alums-header-wrapper p {
+    text-align: start;
+    margin-top: -1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    max-width: none;
+    font-size: 24pt;
+  }
+
+  .Alums-card {
+    background-size: 30rem;
+    margin-top: 0;
+    padding: 3rem 15rem 3rem 18rem;
+    margin-left: 2rem;
+  }
+
+  .Alums-wrapper.odd,
+  .Alums-wrapper.even {
+    justify-content: center;
+  }
+
+  .BioList-alums h2,
+  .BioList-alums h3 {
+    font-size: 18px;
+  }
+
+  .BioList-alums h3 {
+    color: black;
+  }
+
+  .BioList-alums.left {
+    margin-right: -10rem;
+  }
+
+  .BioList-alums.right {
+    margin-left: -10rem;
+  }
+}
+
+/*-LARGE SCREENS (DESKTOP)-*/
 @media screen and (min-width: 1000px) {
+
   .BioList-bios {
     margin-left: 5.313rem;
     margin-right: 5.313rem;
@@ -43,7 +203,48 @@
     z-index: 0;
   }
 
-  .BioList-header p {
-    width: 50%;
+  .Alums-card {
+    background-size: 56rem;
+    padding: 6rem 27rem;
+
+  }
+
+  .Alums-wrapper.odd {
+    justify-content: end;
+  }
+
+  .Alums-wrapper.even {
+    justify-content: start;
+  }
+
+  .BioList-alums h2,
+  .BioList-alums h3 {
+    font-size: 25px;
+  }
+
+  .Alums-header-wrapper {
+    margin-bottom: 10rem;
+  }
+
+  .Alums-header-wrapper p {
+    text-align: center;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24pt;
+  }
+
+  .BioList-alums.left {
+    margin-right: 0;
+  }
+
+  .BioList-alums.right {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .Alums-card {
+    margin-top: -7rem;
   }
 }

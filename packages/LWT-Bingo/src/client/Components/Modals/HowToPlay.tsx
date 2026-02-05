@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Box, Typography, Button, Stack, IconButton } from '@mui/material';
-import { FocusTrap } from '@mui/base/FocusTrap';
+import FocusTrap from '@mui/material/Unstable_TrapFocus/FocusTrap';
 import { CloseOutlined } from '@mui/icons-material';
 import { useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';

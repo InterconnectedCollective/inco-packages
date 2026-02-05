@@ -3,7 +3,7 @@ import { Box, Typography, Button, Stack, IconButton } from '@mui/material';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import { FocusTrap } from '@mui/base/FocusTrap';
+import FocusTrap from '@mui/material/Unstable_TrapFocus/FocusTrap';
 import { ConditionsList } from '../../../util/data/termsConditions';
 import { CloseOutlined } from '@mui/icons-material';
 import { useTheme } from '@mui/material';
