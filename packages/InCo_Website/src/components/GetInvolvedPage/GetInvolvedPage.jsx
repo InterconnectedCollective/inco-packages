@@ -39,7 +39,7 @@ const GetInvolvedPage = () => {
                     </ul>
                     <br></br>
                     <p>
-                        If you resonate with our message and have skills to showcase, seize this volunteer opportunity 🌟 Contribute to a real-world project for your portfolio, be a part of a powerful summit, and grow alongside an incredible tech team.
+                        If you resonate with our message and have skills to showcase, seize this volunteer opportunity 🌟 Contribute to a real-world project for your portfolio, and grow alongside an incredible tech team.
                     </p>
                     <br></br>
                     <p>

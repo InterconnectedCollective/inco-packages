@@ -43,10 +43,10 @@ const FAQ_6 = new FAQ(
     `
 )
 
-const FAQ_7 = new FAQ(
-  "Is InCo associated with Lesbians Who Tech?",
-  "Nope. InCo first created the BINGO game when we attended our first Lesbians Who Tech conference, but we are not affiliated with or related to Lesbians Who Tech."
-)
+// PREVIOUSLY CONTAINED QUESTION IN RELATION TO LWT. WILL LEAVE COMMENTED OUT UNTIL WE CAN THINK OF ANOTHER QUESTION
+// const FAQ_7 = new FAQ(
+
+// )
 
 const FAQ_8 = new FAQ(
   "Is this game really free? Are there any hidden charges or fees associated with it?",
@@ -95,7 +95,7 @@ export const FAQS = [
   FAQ_4,
   FAQ_5,
   FAQ_6,
-  FAQ_7,
+  // FAQ_7,
   FAQ_8,
   FAQ_9,
   FAQ_10,
