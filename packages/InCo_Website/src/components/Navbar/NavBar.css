@@ -165,7 +165,6 @@ a>.nav-play-btn:active:focus:target {
     cursor: pointer;
     transition: all 0.04s ease;
     z-index: 9999;
-    visibility: hidden;
 }
 
 .menu-btn-hidden {
@@ -283,12 +282,6 @@ a>.nav-play-btn:active:focus:target {
         display: none;
     }
 
-    .menu-btn {
-        position: absolute;
-        left: 0;
-        z-index: 9999 !important;
-    }
-
     #root>div>nav>div>div.d-flex.align-items-center.justify-content-between.position-relative.flex-row-reverse>a,
     #root>div>nav>div>div.d-flex.align-items-center.justify-content-between.position-relative.flex-row>a {
         margin: .6em 0;
@@ -318,6 +311,9 @@ a>.nav-play-btn:active:focus:target {
     }
 
     .menu-btn {
+        position: absolute;
+        left: 0;
+        z-index: 9999 !important;
         border-radius: 50%;
         height: 2.6rem;
         width: 2.6rem;
@@ -325,8 +321,11 @@ a>.nav-play-btn:active:focus:target {
         justify-content: center;
         align-items: center;
         margin: 0;
-        visibility: visible;
         transition: all 0.2s ease;
+    }
+
+    [aria-label*="open menu"] {
+        visibility: visible;
     }
 
     .menu-btn>span {
