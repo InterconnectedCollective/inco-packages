@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, BrowserContext } from '@playwright/test';
 
 require('dotenv').config();
 
@@ -12,6 +12,16 @@ function env(): string {
   }
 }
 
+function bingo_url(): string {
+  if (env() == "production") {
+    console.log("Using production url https://bingo.incocollective.com/");
+    return 'https://bingo.incocollective.com/';
+  } else {
+    console.log("Using local url http://localhost:8080");
+    return 'http://localhost:8080';
+  }
+}
+
 function home_url(): string {
   if (env() == "production") {
     console.log("Using production url https://incocollective.com/");
@@ -22,15 +32,39 @@ function home_url(): string {
   }
 }
 
-test('InCo home page loads', async ({ page }) => {
+test('InCo Home & About pages load', async ({ page }) => {
 
   await page.goto(home_url());
-
   await expect(page).toHaveTitle(/Interconnected Collective/);
 
   await page.getByRole('link', { name: 'ABOUT US' }).nth(1).click();
-
-  await page.getByText("Contributors").isVisible()
+  expect(page.getByText("Contributors")).toBeVisible({ timeout: 30000 })
 
 });
 
+test('Bingo home page & login modal load', async ({ page }) => {
+
+  await page.goto(bingo_url());
+  await expect(page).toHaveTitle(/Bingo!/);
+
+  const signInButton = page.getByText("Sign in to track your scores!");
+  await signInButton.click();
+
+  
+  const gmailLoginButton = page.getByText("Gmail Login");
+  const popupPromise = page.waitForEvent('popup');
+  await gmailLoginButton.click();
+  const popup = await popupPromise;
+  await expect(popup.getByRole("textbox", { name: "email" })).toBeVisible({ timeout: 30000 });
+  console.log("Popup title: " + await popup.title());
+  popup.close();
+  
+  page.on("dialog", async (dialog) => {
+    expect(dialog.message()).toContain("Whoops, something went wrong, please try logging in again!");
+  });
+
+  // WIP - continue work here after leaderboard is fixed
+  // await gmailLoginButton.scrollIntoViewIfNeeded();
+  // await gmailLoginButton.click();
+
+});
