@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-require('dotenv').config();
+import {} from 'dotenv/config'
 
 function env(): string {
   // Get test environment from environment variables
